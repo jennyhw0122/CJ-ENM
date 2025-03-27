@@ -1,0 +1,101 @@
+:root {
+  --color-white: #FAFAFA;
+  --color-lace-cap: #2B2B35;
+  --color-kimchi: #FF5A00;
+  --color-cj-red: #EF151E;
+  --color-cj-yellow: #FFA500;
+  --color-deep-sea: #006ECD;
+  --color-black: #19181D;
+  --color-gray: #999999;
+}
+
+html, body {
+  font-family: 'CJ ONLYONE NEW body', 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+/* CJ 폰트 등록 */
+@font-face {
+  font-family: 'CJ ONLYONE NEW body';
+  src: url('../fonts/cjonlyone/CJONLYONENEWbodyRegular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CJ ONLYONE NEW body';
+  src: url('../fonts/cjonlyone/CJONLYONENEWbodyLight.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CJ ONLYONE NEW title';
+  src: url('../fonts/cjonlyone/CJONLYONENEWtitleMedium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CJ ONLYONE NEW title';
+  src: url('../fonts/cjonlyone/CJONLYONENEWtitleBold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Typography */
+.t1 {
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 140%;
+}
+
+.t2 {
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 140%;
+}
+
+.t3 {
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 140%;
+}
+
+.t4 {
+  font-family: 'CJ ONLYONE NEW body', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 140%;
+}
+
+.t5 {
+  font-family: 'CJ ONLYONE NEW body', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 150%;
+}
+
+.t6 {
+  font-family: 'CJ ONLYONE NEW body', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.t7 {
+  font-family: 'CJ ONLYONE NEW body', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
