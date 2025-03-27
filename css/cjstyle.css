@@ -1,0 +1,206 @@
+:root {
+  --color-white: #FAFAFA;
+  --color-lace-cap: #2B2B35;
+  --color-kimchi: #FF5A00;
+  --color-cj-red: #EF151E;
+  --color-cj-yellow: #FFA500;
+  --color-deep-sea: #006ECD;
+  --color-black: #19181D;
+  --color-gray: #999999;
+}
+
+/* CJ ONLYONE NEW 폰트 등록 */
+@font-face {
+  font-family: 'CJ ONLYONE NEW body';
+  src: url('../fonts/cjonlyone/CJONLYONENEWbodyRegular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CJ ONLYONE NEW body';
+  src: url('../fonts/cjonlyone/CJONLYONENEWbodyLight.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CJ ONLYONE NEW title';
+  src: url('../fonts/cjonlyone/CJONLYONENEWtitleMedium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CJ ONLYONE NEW title';
+  src: url('../fonts/cjonlyone/CJONLYONENEWtitleBold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Typography */
+.t1 {
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 140%;
+}
+
+.t2 {
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 140%;
+}
+
+.t3 {
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 140%;
+}
+
+.t4 {
+  font-family: 'CJ ONLYONE NEW body', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 140%;
+}
+
+.t5 {
+  font-family: 'CJ ONLYONE NEW body', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 150%;
+}
+
+.t6 {
+  font-family: 'CJ ONLYONE NEW body', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.t7 {
+  font-family: 'CJ ONLYONE NEW body', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: var(--color-black);
+  font-family: 'CJ ONLYONE NEW body', sans-serif;
+  color: var(--color-white);
+}
+
+/* ===================
+   HEADER
+=================== */
+
+.header {
+  width: 100%;
+  padding: 24px 48px;
+  background-color: var(--color-lace-cap);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.nav .nav-list {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav .nav-list li a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.2s ease;
+}
+
+.nav .nav-list li a:hover {
+  color: var(--color-kimchi);
+}
+
+body {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-family: 'CJ ONLYONE NEW body', sans-serif;
+}
+
+/* ===================
+   PROJECTS SECTION
+=================== */
+
+.projects {
+  background-color: var(--color-black);
+  padding: 120px 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projects h2 {
+  text-align: center;
+  margin-bottom: 64px;
+  color: var(--color-black);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 48px;
+}
+
+.project-card {
+  background-color: var(--color-lace-cap);
+  color: var(--color-white);
+  padding: 32px;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+  margin-bottom: 16px;
+  color: var(--color-kimchi);
+}
+
+.project-card p {
+  margin-bottom: 24px;
+  color: var(--color-white);
+}
+
+.btn-text {
+  color: var(--color-cj-yellow);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-text:hover {
+  text-decoration: underline;
+}
