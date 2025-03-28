@@ -1,22 +1,49 @@
-/* ========== HERO SECTION ========== */
-.hero {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 48px;
-}
-
-.hero-inner {
-  max-width: 800px;
-}
-
-.hero .t1 {
+.hero-section {
+  height: 100vh;
+  width: 100%;
+  background: radial-gradient(circle at 20% 40%, #ff5a00, #ef151e, #19181D, #006ecd);
+  background-size: 300% 300%;
+  background-position: center;
+  animation: gradientShift 15s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 96px;
   color: var(--color-white);
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-overlay {
+  max-width: 720px;
+  z-index: 10;
+}
+
+.hero-sub {
+  font-family: 'CJ ONLYONE NEW body', sans-serif;
+  font-size: 16px;
+  color: var(--color-gray);
+  margin-bottom: 12px;
+}
+
+.hero-title {
+  font-family: 'CJ ONLYONE NEW title', sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.3;
   margin-bottom: 24px;
 }
 
-.hero .t5 {
-  color: var(--color-gray);
-  font-weight: 300;
+.hero-desc {
+  font-family: 'CJ ONLYONE NEW body', sans-serif;
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--color-white);
+  opacity: 0.9;
 }
 
 /* ========== PROJECT SECTION ========== */
