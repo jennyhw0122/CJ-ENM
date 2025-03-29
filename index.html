@@ -5,22 +5,23 @@
   <title>황지원 Portfolio | CJ ENM Designer</title>
   <link rel="stylesheet" href="../css/common.css" />
   <link rel="stylesheet" href="css/index.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-
   <header class="header">
     <div class="container">
       <div class="logo">JIWON HWANG</div>
       <nav class="nav">
         <ul class="nav-list">
-          <li><a href="#projects">Projects</a></li>
+          <li></li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#projects">Projects</a></li>
           <li><a href="#about">About Me</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
-
+  
   <section class="hero-section">
     <div class="hero-overlay">
       <p class="hero-sub">CJ ENM 포트폴리오 · 2025</p>
@@ -28,27 +29,42 @@
       <p class="hero-desc">제품을 넘어 흐름을 설계하는<br> UX 디자이너의 여정</p>
     </div>
   </section>
-
-  <section id="projects" class="projects">
-    <h2 class="t2">PROJECTS</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <h3 class="t4">01. 문제를 다시 설계하다</h3>
-        <p class="t6">코레일 UX 개편 - 예약 이탈 35%를 줄인 구조적 개선</p>
-        <a href="#project1" class="btn-text">자세히 보기</a>
-      </div>
-      <div class="project-card">
-        <h3 class="t4">02. 흐름을 구조화하다</h3>
-        <p class="t6">YES24 디자인 시스템 - 확장 가능한 UI 설계</p>
-        <a href="#project2" class="btn-text">자세히 보기</a>
-      </div>
-      <div class="project-card">
-        <h3 class="t4">03. 협업의 온도를 맞추다</h3>
-        <p class="t6">대규모 IT 컨퍼런스 플랫폼 - 기획/개발과 실시간 협업</p>
-        <a href="#project3" class="btn-text">자세히 보기</a>
-      </div>
-    </div>
-  </section>
-
+  <main>
+    <ul class="slider">
+      <li class="item" style="background-image: url('assets/images/korail-cover.jpg')">
+        <div class="content">
+          <h2 class="title">01. 문제를 다시 설계하다</h2>
+          <p class="description">
+            코레일 UX 개편 – 예약 이탈 35%를 줄인 구조적 개선<br>
+            뒤로 가기 클릭 평균 3.07회 → 2.00회로 개선
+          </p>
+          <a href="html/korail.html"><button>자세히 보기</button></a>
+        </div>
+      </li>
+      <li class="item" style="background-image: url('assets/images/yes24-cover.jpg')">
+        <div class="content">
+          <h2 class="title">02. 흐름을 구조화하다</h2>
+          <p class="description">
+            YES24 디자인 시스템 - 서비스 특성과 UI 일관성 간 균형 설계
+          </p>
+          <a href="html/yes24.html"><button>자세히 보기</button></a>
+        </div>
+      </li>
+      <li class="item" style="background-image: url('assets/images/conference-cover.jpg')">
+        <div class="content">
+          <h2 class="title">03. 협업의 온도를 맞추다</h2>
+          <p class="description">
+            대규모 IT 컨퍼런스 플랫폼 - 기획자·개발자와의 실시간 협업을 리드한 경험
+          </p>
+          <a href="html/conference.html"><button>자세히 보기</button></a>
+        </div>
+      </li>
+    </ul>
+    <nav class="nav">
+      <button class="btn prev material-icons">chevron_left</button>
+      <button class="btn next material-icons">chevron_right</button>
+    </nav>
+  </main>
+  <script src="../js/index.js"></script>
 </body>
 </html>

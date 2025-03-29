@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>코레일 UX 구조 개선 프로젝트</title>
+  <link rel="stylesheet" href="../css/common.css" />
+  <link rel="stylesheet" href="../css/korail.css" />
+</head>
+
+<header class="header">
+  <div class="container">
+    <div class="logo">JIWON HWANG</div>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li></li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<body>
+  <div class="container">
+    <h1 class="t2">코레일 UX 구조 개선 프로젝트</h1>
+    <p class="t5 highlight-text">― 뒤로 가기 3.07회 → 2.00회, 사용자 흐름을 재설계해 예약 완료율을 7.18%p 개선한 구조 중심 UX 사례</p>
+
+    <!-- 프로젝트 개요 -->
+    <section>
+      <h2 class="t3">프로젝트 개요</h2>
+      <div class="info-cards">
+        <div class="card"><strong>역할</strong><span>프로덕트 디자이너 (UX 전략 · 조사 · 구조 설계 · UI)</span></div>
+        <div class="card"><strong>프로젝트 기간</strong><span>2024.12.16 ~ 2025.01.17 (4주간)</span></div>
+        <div class="card"><strong>팀 구성</strong><span>디자이너 4 · 개발자 1</span></div>
+        <div class="card"><strong>기여도</strong><span>UX 전략/조사 40%, UI 설계 50%, 디자인 QA/협업 10%</span></div>
+        <div class="card"><strong>도구</strong><span>GA4, Figma, Notion, Google 설문, 웹 크롤링</span></div>
+      </div>
+    </section>
+
+    <!-- 문제 정의 -->
+    <section class="problem-intro section">
+      <div class="section-inner">
+        <h2 class="section-title">여행을 계획하는 순간은 설레야 한다.</h2>
+        <p class="subtitle">그런데, 사용자의 <strong class="highlight-text">35%</strong>는 예약 도중 떠날까요?</p>
+    
+        <div class="context-block">
+          <p class="context-text">
+            기획 의도는 <strong>지역 기반 기차 여행 활성화</strong>를 위해 사용자에게 정확한 예약 흐름을 제공하는 것이었으나,
+          </p>
+          <ul class="bullet-list">
+            <li>설문조사 (30명)에서 ‘예약 화면 직관성’ 2.47점, ‘단계 과다’ 2.53점으로 낮은 만족도 확인</li>
+            <li>인터뷰와 UT에서는 “뒤로 가면 처음부터 다시 시작돼서 짜증”이라는 피드백이 많았다.</li>
+            <li>앱 리뷰에서도 “뒤로가기가 작동하지 않음”, “예약 구조가 너무 복잡하다”는 반복된 언급</li>
+          </ul>
+    
+          <div class="note-box">
+            사용자가 인원 선택값을 변경하고 싶어도 해당 플로우에서 변경할 방법이 없어, 반복적으로 ‘뒤로 가기’를 누르는 흐름이 생김.<br>
+            <strong>선택값은 모달 형태로 노출되지만</strong>, 수정하려면 뒤로 가기를 눌러야 하며 초기화되어 다시 처음부터 입력해야 했음.
+          </div>
+    
+          <p class="summary-highlight">
+            <strong>‘선택 변경 불가능한 정보 → 반복 선택 → 피로 → 예약 포기’</strong>의 구조적 문제가 UX 이탈의 근본 원인임
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 사용자 조사 -->
+    <section>
+      <h2 class="t3">사용자 조사: 행동 + 인식 데이터를 통한 흐름 진단</h2>
+      <div class="card-grid">
+        <div class="card"><strong>앱 리뷰 크롤링</strong><span>129건</span></div>
+        <div class="card"><strong>Google 설문 + 미션형 인터뷰</strong><span>30명</span></div>
+      </div>
+
+      <h3 class="t4">정성 데이터 인사이트 (앱 리뷰 + 인터뷰)</h3>
+      <ul class="bullet-list">
+        <li>“뒤로 가기 시 첫 화면으로 돌아간다”</li>
+        <li>“선택값이 초기화되어 다시 처음부터 입력해야 한다”</li>
+      </ul>
+
+      <div class="insight-bar">
+        <p>예약/UX 문제: <strong>43.1%</strong></p>
+        <div class="progress-bar"><div style="width: 43.1%"></div></div>
+        <p>복잡한 예약 과정: <strong>43.6%</strong></p>
+        <div class="progress-bar"><div style="width: 43.6%"></div></div>
+        <p>UI 직관성 부족: <strong>25.0%</strong></p>
+        <div class="progress-bar"><div style="width: 25%"></div></div>
+        <p>단계 이동 불편: <strong>25.0%</strong></p>
+        <div class="progress-bar"><div style="width: 25%"></div></div>
+      </div>
+    </section>
+
+    <!-- 정량 데이터 -->
+    <section>
+      <h3 class="t4">정량 데이터 인사이트 (설문 기반)</h3>
+      <div class="graph-group">
+        <div class="graph">
+          <p>예약 화면 직관성</p>
+          <div class="progress-bar"><div style="width: 49.4%"></div></div>
+          <span>2.47 / 5.0</span>
+        </div>
+        <div class="graph">
+          <p>여행지 정보 접근성</p>
+          <div class="progress-bar"><div style="width: 50%"></div></div>
+          <span>2.50 / 5.0</span>
+        </div>
+        <div class="graph">
+          <p>불필요한 예약 단계</p>
+          <div class="progress-bar"><div style="width: 50.6%"></div></div>
+          <span>2.53 / 5.0</span>
+        </div>
+        <div class="graph">
+          <p>예약 절차의 자연스러움</p>
+          <div class="progress-bar"><div style="width: 71.4%"></div></div>
+          <span>3.57 / 5.0</span>
+        </div>
+        <div class="graph">
+          <p>예약 완료 안내</p>
+          <div class="progress-bar"><div style="width: 70%"></div></div>
+          <span>3.50 / 5.0</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 가설 수립 및 전략 -->
+    <section>
+      <h2 class="t3">UX 가설 수립 및 설계 전략</h2>
+      <ul class="bullet-list">
+        <li>출발역 + 인원 동시 선택 → 뒤로가기 감소, 예약 완료율 상승</li>
+      </ul>
+
+      <table>
+        <thead>
+          <tr><th>문제</th><th>개선 방향</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>흐름 단절</td><td>출발역+인원 통합 배치</td></tr>
+          <tr><td>선택값 초기화</td><td>선택값 유지 로직 구현</td></tr>
+          <tr><td>정보 혼란</td><td>명확한 시각적 피드백 제공</td></tr>
+          <tr><td>단계 이동 불편</td><td>유도형 네비게이션, 뒤로가기 개선</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Before / After -->
+    <section>
+      <h2 class="t3">UI Before / After</h2>
+      <div class="before-after">
+        <img src="../assets/images/korail-as.jpg" alt="Before UI" />
+        <img src="../assets/images/korail-to.jpg" alt="After UI" />
+      </div>
+      <table>
+        <thead>
+          <tr><th>항목</th><th>기존 UI</th><th>개선 UI</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>인원 선택 위치</td><td>상품 선택 이후</td><td>출발역과 통합 배치</td></tr>
+          <tr><td>입력값 유지</td><td>초기화됨</td><td>유지됨</td></tr>
+        </tbody>
+      </table>
+      <div class="flow-chart">
+        <h3 class="t3">기존 플로우</h3>
+        <div class="flow-line">
+          <div class="flow-node">메인페이지</div>
+          <div class="flow-node">지역별 여행</div>
+          <div class="flow-node">상품목록 선택</div>
+          <div class="flow-node">상품 상세</div>
+          <div class="flow-node">날짜 선택</div>
+          <div class="flow-node">인원/열차 시간</div>
+          <div class="flow-node">패키지 선택</div>
+          <div class="flow-node">열차 출발/도착역 선택</div>
+          <div class="flow-node">상세인원선택</div>
+          <div class="flow-node">약관 동의</div>
+          <div class="flow-node">여행자 정보</div>
+          <div class="flow-node">예약 완료</div>
+        </div>
+      </div>
+      <div class="flow-chart">
+        <h3 class="t3">개선 후 플로우</h3>
+        <div class="flow-line">
+          <div class="flow-node">메인페이지</div>
+          <div class="flow-node">지역별 여행</div>
+          <div class="flow-node">상품목록 선택</div>
+          <div class="flow-node">상품 상세</div>
+          <div class="flow-node">날짜 선택</div>
+          <div class="flow-node">출발,도착역/상세 인원 선택</div>
+          <div class="flow-node">상품/패키지 선택</div>
+          <div class="flow-node">약관 동의</div>
+          <div class="flow-node">여행자 정보</div>
+          <div class="flow-node">예약 완료</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- A/B 테스트 -->
+    <section>
+      <h2 class="t3">A/B 테스트: 구조 설계의 인과 검증</h2>
+      <table>
+        <thead>
+          <tr><th>항목</th><th>기존 UI</th><th>개선 UI</th><th>변화</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>뒤로가기 횟수</td><td>3.07회</td><td>2.00회</td><td>-1.07회</td></tr>
+          <tr><td>예약 완료율</td><td>53.60%</td><td>60.78%</td><td>+7.18%p</td></tr>
+          <tr><td>상품 선택 후 이탈률</td><td>12.16%</td><td>0%</td><td>완전 제거</td></tr>
+        </tbody>
+      </table>
+      <p class="t6">· 테스트 방식: 동일 사용자 261명 / GA4 로그 기반 분석</p>
+    </section>
+
+    <!-- 인사이트 요약 -->
+    <section>
+      <h2 class="t3">인사이트 요약 및 구조적 학습</h2>
+      <ul class="bullet-list">
+        <li>선택 흐름의 단절 → 사용자 불안 → 반복 입력 → 이탈</li>
+        <li>선택값 유지와 흐름 설계가 핵심</li>
+        <li>데이터 기반 설계 → 실제 행동 변화 검증</li>
+      </ul>
+    </section>
+
+    <!-- 전략적 확장 가능성 -->
+    <section>
+      <h2 class="t3">전략적 확장 가능성</h2>
+      <table>
+        <thead>
+          <tr><th>적용 서비스</th><th>기대 효과</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>티켓팅 플랫폼</td><td>좌석/일자/인원 선택 통합 → 플로우 최적화</td></tr>
+          <tr><td>숙박 예약 플랫폼</td><td>복잡한 옵션 구조 → 흐름 통합 설계</td></tr>
+          <tr><td>행사 등록 시스템</td><td>단계별 정보 확인 구조 → 이탈률 감소</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 최종 정리 -->
+    <section>
+      <h2 class="t3">최종 정리</h2>
+      <p class="highlight-text">
+        “사용자의 불안 행동(뒤로가기 반복)을 구조 설계로 개선하여 예약 완료율을 7.18%p 상승시킨 UX 전략 사례입니다.”
+      </p>
+      <ul class="bullet-list">
+        <li>단순 UI 개선이 아닌, 구조 중심의 사용자 흐름 설계</li>
+        <li>정량/정성/행동 데이터 기반의 설계 근거 수립</li>
+        <li>가설 → 설계 → 실험 → 결과 검증의 선순환 구조 실현</li>
+        <li>타 플랫폼에도 적용 가능한 구조 설계 원칙 도출</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
