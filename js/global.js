@@ -25,3 +25,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollSection = document.querySelector(".scroll-top-section");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollSection.classList.add("visible");
+    } else {
+      scrollSection.classList.remove("visible");
+    }
+  });
+});

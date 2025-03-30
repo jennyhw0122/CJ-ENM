@@ -2,30 +2,174 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <title>YES24 디자인 시스템 구축 및 개선 보고서</title>
+  <title>YES24</title>
   <link rel="stylesheet" href="../css/common.css" />
-  <link rel="stylesheet" href="../css/korail.css" />
+  <link rel="stylesheet" href="../css/yes24.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-
-<header class="header">
-  <div class="container">
-    <div class="logo">JIWON HWANG</div>
-    <nav class="nav">
-      <ul class="nav-list">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="/html/project.html">Projects</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
 <body>
-</body>
-<footer class="footer">
-  <div class="footer-container">
-    <!-- 여기에 나중에 내용이 들어갈 예정 -->
-  </div>
-</footer>
-</html>
+  <header class="header">
+    <div class="container">
+      <div class="logo">JIWON HWANG</div>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="/html/project.html">Projects</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  
+  <main class="container">
+    <section class="section">
+      <h1 class="t2">YES24 디자인 시스템 구축 및 개선</h1>
+      <p class="t5 highlight-text">
+        통합된 기준 없이 개별 최적화만 반복된 결과,<br>
+        브랜드 간 UI 불일치와 유지보수 비효율이 누적되었습니다.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="t3">프로젝트 개요</h2>
+      <div class="info-cards t7">
+        <div class="card"><strong>진행</strong><span>프로덕트 디자이너 (5인)</span></div>
+        <div class="card"><strong>프로젝트 기간</strong><span>2025.01.21 ~ 2025.02.21 (4주)</span></div>
+        <div class="card"><strong>기여도</strong><span>기획 35% · 디자인 65%</span></div>
+      </div>
+      <p class="t6">Foundation · Modes & Variables · Components 중심의 시스템 설계</p>
+    </section>
+
+    <section class="section">
+      <h2 class="t3">문제 정의</h2>
+      <div class="bullet-list t7">
+        <li><strong>기획자</strong>: 각 서비스의 UI 최적화 → UI 일관성 붕괴</li>
+        <li><strong>디자이너</strong>: 기존 UI 유지로 사용자 혼란 최소화 → 일관성 관리 어려움</li>
+        <li><strong>개발자</strong>: 코드 중복 · 유지보수 난이도 증가 → 효율성 저하</li>
+      </div>
+      <div class="note-box t6">
+        시각 자료: 컬러, 타이포그래피, Spacing 문제 시각화 이미지 예정
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="t3">사용자 여정 중심 개선</h2>
+      <ul class="bullet-list t7">
+        <li><strong>탐색 단계</strong>: 컬러 시스템 개선 → 정보 탐색 직관성 향상</li>
+        <li><strong>선택 단계</strong>: 타이포그래피 · Spacing 표준화 → 선택 과정 명료화</li>
+        <li><strong>구매 단계</strong>: 공통 컴포넌트 적용 → 구매 흐름 일관성 강화</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2 class="t3">문제-해결 구조화 매트릭스</h2>
+      <table class="table-grid t7">
+        <thead>
+          <tr><th>문제</th><th>중요도</th><th>해결 난이도</th><th>해결 방안</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>컬러 HEX코드 직접 사용</td>
+            <td>높음</td>
+            <td>중간</td>
+            <td>Primitive → Theme → Semantic 구조</td>
+          </tr>
+          <tr>
+            <td>타이포그래피 일관성 부족</td>
+            <td>중간</td>
+            <td>낮음</td>
+            <td>스타일 명확화</td>
+          </tr>
+          <tr>
+            <td>컴포넌트 부재</td>
+            <td>높음</td>
+            <td>높음</td>
+            <td>Atomic Design · Slot 시스템 도입</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2 class="t3">UX/UI 이슈 및 솔루션</h2>
+      <ul class="bullet-list t7">
+        <li><strong>타이포그래피 이슈</strong>: 위계 불명확 → 기준 수립으로 일관성 개선</li>
+        <li><strong>Spacing 이슈</strong>: 비일관 단위 사용 → 2px, 4px, 8px 기준 체계로 통합</li>
+      </ul>
+      <div class="note-box t6">타이포그래피 / Spacing 기준표 시각 자료 예정</div>
+    </section>
+
+    <section class="section">
+      <h2 class="t3">검증 및 프로토타입</h2>
+      <ul class="bullet-list t7">
+        <li>도서 · 티켓 서비스 프로토타입 제작 및 시연</li>
+        <li>다양한 디바이스에서 UX 일관성 검증</li>
+      </ul>
+      <div class="note-box t6">프로토타입 시연 영상 링크 / 이미지 예정</div>
+    </section>
+
+    <section class="section">
+      <h2 class="t3">실무 관점 효과</h2>
+      <table class="table-grid t7">
+        <thead>
+          <tr><th>역할</th><th>개선 포인트</th><th>정량/정성 효과</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>기획자</td>
+            <td>컴포넌트 단위 정의로 전달 명확</td>
+            <td>문서 작성 시간 30%↓, 피드백 3→1</td>
+          </tr>
+          <tr>
+            <td>디자이너</td>
+            <td>재사용 설계, Variables 활용</td>
+            <td>티켓에 90% 적용, 컬러 변경 1시간→15분</td>
+          </tr>
+          <tr>
+            <td>개발자</td>
+            <td>props 기반 구현, QA 피드백 감소</td>
+            <td>UI 구현 시간 40%↓, 피드백 5→2건</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2 class="t3">프로젝트 기대 효과</h2>
+      <ul class="bullet-list t7">
+        <li>UI 일관성 확보 → 사용자 경험 개선</li>
+        <li>변수 기반 시스템 → 유지보수 & 확장성 향상</li>
+        <li>컴포넌트 재사용 → 협업 효율, 개발 시간 절감</li>
+      </ul>
+      <p class="highlight-text t5">
+        디자인 시스템은 사용자의 학습 비용을 줄이고 브랜드 충성도를 높이는 UX 기반 구조입니다.
+      </p>
+    </section>
+  </main>
+  
+  <section class="back-button-section">
+    <button class="back-button t6" onclick="history.back()">
+      <span class="material-icons">arrow_back</span>
+      이전 페이지로 돌아가기
+    </button>
+  </section>
+  <section class="scroll-top-section">
+    <button class="scroll-top-button" id="scrollTopButton" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+      <i class="material-icons">arrow_upward</i>
+    </button>
+  </section>
+    <div class="custom-cursor">
+      <span class="cursor-text">See Project</span>
+    </div>
+    <script src="../js/cursor.js"></script>
+    <script src="../js/global.js"></script>
+  </body>
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Footer 내용 미정 -->
+    </div>
+  </footer>
+  </html>

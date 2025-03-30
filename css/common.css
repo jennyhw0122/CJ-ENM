@@ -104,10 +104,8 @@ html, body {
   z-index: 1000;
   background: rgba(25, 24, 29, 0.5);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   scroll-behavior: smooth;
-  padding: 16px 48px;
   align-items: center;
   justify-content: space-between;
   padding: 16px 48px;
@@ -189,7 +187,6 @@ a:visited {
   pointer-events: none;
   transform: translate(-50%, -50%);
   z-index: 9999;
-  display: none;
   justify-content: center;
   align-items: center;
   transition: all 0.08s ease;
@@ -223,11 +220,175 @@ a:visited {
   transform: translateY(0);
 }
 
+/* ===== 공통 정보 카드 (info-cards) ===== */
+.info-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.info-cards .card {
+  flex: 1 1 220px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 16px 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+}
+
+/* ===== 리스트 ===== */
+.bullet-list {
+  list-style: disc;
+  padding-left: 20px;
+  margin-top: 12px;
+  line-height: 1.7;
+}
+
+/* ===== 강조 박스 ===== */
+.note-box {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid var(--color-kimchi);
+  padding: 16px 20px;
+  border-radius: 6px;
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+/* ===== 섹션 제목 / 부제목 ===== */
+.section-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: var(--color-gray);
+  margin-bottom: 24px;
+}
+
+/* ===== 프로그레스 바 ===== */
+.progress-bar {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+  height: 10px;
+  margin: 8px 0;
+}
+
+.progress-bar > div {
+  height: 100%;
+  background: var(--color-kimchi);
+  border-radius: 6px;
+}
+
+/* ===== Before / After 비교 ===== */
+.before-after {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 20px 0;
+}
+
+.before-after img {
+  flex: 1 1 300px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* ===== 사용자 흐름 다이어그램 ===== */
+.flow-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+  flex-direction: row;
+  align-items: center;
+}
+
+.flow-node {
+  background: var(--color-deep-sea);
+  color: var(--color-white);
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 14px;
+}
+
+/* ===== 표 매트릭스 ===== */
+.table-grid {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+}
+
+.table-grid th, .table-grid td {
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: left;
+}
+
+.table-grid thead {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.table-grid tbody tr:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.back-button {
+  padding: 12px 24px;
+  border-radius: 100px;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border: 1px solid var(--color-gray);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.back-button:hover {
+  background-color: var(--color-kimchi);
+  transform: translateY(-2px);
+}
+
+.back-button .material-icons {
+  font-size: 20px;
+}
+
+.scroll-top-section {
+  display: flex;
+  justify-content: flex-end;
+  padding: 24px 48px 0;
+  background: transparent;
+}
+
+.scroll-top-button {
+  padding: 16px 16px;
+  border-radius: 100px;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border: 1px solid var(--color-gray);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 10;
+}
+
+.scroll-top-button:hover {
+  background-color: var(--color-kimchi);
+  transform: translateY(-2px);
+}
+
 .footer {
   background-color: var(--color-black); 
   color: var(--color-white);
   padding: 80px 48px;
-  margin-top: 100px;
+    margin-top: 100px;
   text-align: center;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }

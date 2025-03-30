@@ -2,9 +2,11 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <title>코레일 UX 구조 개선 프로젝트</title>
+  <title>SYNXCON 2025 | 대규모 IT 컨퍼런스 UX</title>
   <link rel="stylesheet" href="../css/common.css" />
-  <link rel="stylesheet" href="../css/korail.css" />
+  <link rel="stylesheet" href="../css/conference.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <header class="header">
@@ -20,3 +22,167 @@
     </nav>
   </div>
 </header>
+
+<main class="container">
+  <h1 class="t2">대규모 IT 컨퍼런스 UX 설계: SYNXCON 2025</h1>
+
+  <!-- 01. 프로젝트 개요 -->
+  <section>
+    <h2 class="t3">01. 프로젝트 개요</h2>
+    <div class="info-cards t7">
+      <div class="card"><strong>프로젝트명</strong><span>SYNXCON 2025 웹 플랫폼 UX 설계 및 구축</span></div>
+      <div class="card"><strong>기간</strong><span>2025.02.24 – 2025.04.02 (총 6주)</span></div>
+      <div class="card"><strong>참여 인원</strong><span>기획 1, 디자이너 2, 프론트엔드 2, 백엔드 4 (총 9명)</span></div>
+      <div class="card"><strong>담당 역할</strong>
+        <span>
+          UX 전략 수립 및 사용자 플로우 정의<br>
+          디자인 시스템 설계 및 컴포넌트 개발<br>
+          프로토타입 제작 및 개발 커뮤니케이션<br>
+          UT 및 AI 기반 UX 분석 주도
+        </span>
+      </div>
+    </div>
+
+    <p class="t5 highlight-text">
+      ‘기록의 단절’과 ‘네트워킹 부족’이라는 구조적 UX 문제를 해결하기 위한 프로젝트
+    </p>
+  </section>
+
+  <!-- 02. 문제 정의 -->
+  <section>
+    <h2 class="t3">02. 문제 정의</h2>
+    <p class="t6">
+      참가자 27명 중 39.5%가 “행사 인사이트 기록이 번거롭다”고 응답했고,<br>
+      90명 중 14.3%는 “네트워킹 기회가 부족하다”고 답함
+    </p>
+    <p class="t6">
+      참가자는 세션 내용을 별도 앱에 기록 → 플랫폼과 단절 → 공유 및 네트워킹 흐름 단절
+    </p>
+    <div class="note-box t6">
+      <strong>결론:</strong> “기록·공유·연결이 유기적으로 이어지는 UX 구조로 재설계 필요”<br>
+      인사이트 노트 기능 중심으로 디지털 컨퍼런스 경험 확장
+    </div>
+  </section>
+
+  <!-- 03. UX 전략 및 설계 원칙 -->
+  <section>
+    <h2 class="t3">03. UX 전략 및 설계 원칙</h2>
+    <ul class="bullet-list t7">
+      <li>세션 인사이트 기록 → 공유 → 교류까지 이어지는 핵심 흐름 중심 UX</li>
+      <li>MVP 우선 설계 및 확장 가능성 고려</li>
+    </ul>
+    <h3 class="t4">디자인 시스템</h3>
+    <ul class="bullet-list t7">
+      <li>Foundation: 색상, 그리드, 타이포 시스템 정의</li>
+      <li>Components: Slot, Tab, Card 등 반응형 대응 컴포넌트 설계</li>
+      <li>UI 일관성: 세션, 노트, 마이페이지 동일한 구조 및 인터랙션</li>
+      <li>재사용성 강화: 공통 UI 컴포넌트화</li>
+    </ul>
+  </section>
+
+  <!-- 04. UX 플로우 및 정보구조 설계 -->
+  <section>
+    <h2 class="t3">04. UX 플로우 및 정보구조 설계</h2>
+    <h3 class="t4">핵심 플로우</h3>
+    <div class="flow-line">
+      <div class="flow-node">세션 탐색</div>
+      <div class="flow-node">세션 신청</div>
+      <div class="flow-node">인사이트 노트 작성</div>
+      <div class="flow-node">마이페이지 공유</div>
+    </div>
+    <h3 class="t4">정보구조 (IA)</h3>
+    <ul class="bullet-list t7">
+      <li>홈: 세션 안내 + 인사이트 노트 강조</li>
+      <li>세션: 키워드 필터 + 카드형 요약</li>
+      <li>노트: 실시간 저장 + 공유 기능</li>
+      <li>마이페이지: 신청내역 및 작성 콘텐츠 확인</li>
+    </ul>
+  </section>
+
+  <!-- 05. UX 개선 흐름 -->
+  <section>
+    <h2 class="t3">05. UX 개선 흐름</h2>
+    <table class="table-grid t7">
+      <thead>
+        <tr><th>기간</th><th>내용</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>2/24 ~ 2/28</td><td>기획 및 와이어프레임, 개발환경 세팅</td></tr>
+        <tr><td>3/2 ~ 3/10</td><td>간편 로그인, 세션 리스트 구현</td></tr>
+        <tr><td>3/11 ~ 3/18</td><td>인사이트 노트 작성 기능, QR 인증, UT 설계</td></tr>
+        <tr><td>3/19 ~ 3/26</td><td>마이페이지 구성 및 UT 피드백 반영</td></tr>
+        <tr><td>3/27 ~ 3/31</td><td>QA 및 배포 준비</td></tr>
+      </tbody>
+    </table>
+    <p class="t5 highlight-text">→ 세션 신청 → 기록 → 네트워킹까지의 여정을 구조화</p>
+  </section>
+
+  <!-- 06. 디자인 결과물 -->
+  <section>
+    <h2 class="t3">06. 디자인 결과물</h2>
+    <ul class="bullet-list t7">
+      <li>세션 카드 UI / 추천 태그</li>
+      <li>인사이트 노트 템플릿</li>
+      <li>마이페이지 개인화 구조</li>
+    </ul>
+  </section>
+
+  <!-- 07. AI 기반 UX 분석 -->
+  <section>
+    <h2 class="t3">07. AI 기반 정량 UX 분석</h2>
+    <p class="t6">
+      인터뷰 어려움을 AI 기반 페르소나로 대체 → 10명 페르소나 설계 및 시나리오 UX 인터뷰 진행
+    </p>
+    <table class="table-grid t7">
+      <thead>
+        <tr><th>UX 클러스터</th><th>응답 수</th><th>도출 인사이트</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>세션 정보 부족</td><td>7건</td><td>KPI 기반 카드 리디자인</td></tr>
+        <tr><td>로그인 피로도</td><td>6건</td><td>반복 입력 제거, 안내 강화</td></tr>
+        <tr><td>노트 작성 장벽</td><td>6건</td><td>템플릿 기반 구조화 필요</td></tr>
+        <tr><td>저장/공유 흐름 불안</td><td>5건</td><td>시각적 피드백 도입</td></tr>
+      </tbody>
+    </table>
+    <table class="table-grid t7">
+      <thead>
+        <tr><th>항목</th><th>정량 지표</th><th>수치</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>노트 공유 의향</td><td>업무 공유 가능성</td><td>83%</td></tr>
+        <tr><td>세션 정보 충분도</td><td>결정 가능 응답률</td><td>67%</td></tr>
+        <tr><td>로그인 피로도</td><td>평균 만족도</td><td>2.8 / 5</td></tr>
+        <tr><td>마이페이지 유용성</td><td>재방문 의향</td><td>7.2 / 10</td></tr>
+      </tbody>
+    </table>
+    <p class="note-box t6">
+      AI 기반 분석은 사용자 불편을 <strong>정량화하여 설계의 당위성과 우선순위</strong>를 명확히 해주는 도구로 작동
+    </p>
+  </section>
+
+  <!-- 08. 협업 및 갈등 해결 -->
+  <section>
+    <h2 class="t3">08. 협업 및 갈등 해결 전략</h2>
+    <p class="t6">기획·디자인·개발 간 중심 기능 유지 vs. 일정 조율 갈등 발생</p>
+    <div class="note-box t6">
+      인사이트 노트 기능을 단순히 줄이는 대신,<br>
+      구현 난이도 높은 기능은 후순위로 조정하며 핵심 흐름은 유지
+    </div>
+    <ul class="bullet-list t7">
+      <li>우선순위 도출 기준 공유</li>
+      <li>유저 여정 기반 핵심 UX 흐름 보존</li>
+      <li>단순 MVP가 아닌 설계 의도 중심 구조 완성</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-container"></div>
+</footer>
+
+<div class="custom-cursor">
+  <span class="cursor-text">See Project</span>
+</div>
+<script src="../js/cursor.js"></script>
+</body>
+</html>
