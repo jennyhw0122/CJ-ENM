@@ -24,6 +24,11 @@
   margin-right: auto;
 }
 
+.logo.no-hover::after,
+.logo.no-hover:hover::after {
+  content: none;
+}
+
 .nav-list {
   display: flex;
   gap: 32px;

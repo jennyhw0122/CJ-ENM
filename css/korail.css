@@ -1,0 +1,6 @@
+.divider-icon {
+  color: var(--color-kimchi);
+  font-size: 24px;
+  margin-top: var(--space-md);
+  display: inline-block;
+}
