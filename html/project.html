@@ -13,13 +13,31 @@
 <body>
   <header class="header">
     <div class="container">
-      <a href="/index.html"">JIWON HWANG</a>
+      <a href="/" class="logo no-hover">JIWON HWANG</a>
       <nav class="nav">
         <ul class="nav-list">
-          <li><a href="../index.html" class="t7">Home</a></li>
-          <li><a href="/html/project.html" class="t7">Projects</a></li>
-          <li><a href="#about" class="t7">About Me</a></li>
-          <li><a href="#contact" class="t7">Contact</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/html/project.html">Projects</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li class="theme-dropdown-wrapper">
+            <div class="theme-selector">
+              <button class="theme-toggle-btn" id="theme-dropdown-btn">
+                <iconify-icon icon="ph:moon-stars-bold" class="icon icon-20 icon-left"></iconify-icon>
+                Theme
+                <iconify-icon icon="mdi:chevron-down" class="icon icon-16 icon-right icon-rotate"></iconify-icon>
+              </button>
+              <ul class="theme-dropdown" id="theme-dropdown">
+                <li data-theme="light" class="active">
+                  <iconify-icon icon="ph:sun-bold" class="icon icon-18 icon-left"></iconify-icon>
+                  Light
+                </li>
+                <li data-theme="dark">
+                  <iconify-icon icon="ph:moon-bold" class="icon icon-18 icon-left"></iconify-icon>
+                  Dark
+                </li>
+              </ul>
+            </div>
+          </li>
         </ul>
       </nav>
     </div>
@@ -50,15 +68,20 @@
     </section>
   </main>
 
-  <footer class="footer" style="margin-top: 100px;"></footer>
+  <!-- 커스텀 커서 -->
+  <div class="custom-cursor">
+    <span class="cursor-text">See Project</span>
+  </div>
 
-  <div class="custom-cursor"></div>
-
-
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  <!-- Scripts -->
   <script src="../js/cursor.js"></script>
+  <script src="../js/global.js"></script>
 </body>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    © 2025 JIWON HWANG · Portfolio
+  </div>
+</footer>
 </html>

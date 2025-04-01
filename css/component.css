@@ -15,13 +15,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: var(--color-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+
 .logo {
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--color-link);
   margin-right: auto;
+  color: var(--logo-color);
+  text-decoration: none;
 }
 
 .logo.no-hover::after,
@@ -61,27 +63,33 @@
 
 .theme-dropdown-wrapper {
   position: relative;
+  display: inline-block;
 }
 
-/* 드롭다운 버튼 (Theme ▾) */
+.theme-selector {
+  position: relative;
+}
+
 .theme-toggle-btn {
+  display: none;
   background: none;
   border: none;
-  color: var(--color-link);
+  color: var(--color-text);
   font-size: 14px;
   cursor: pointer;
   padding: 4px 8px;
   border-radius: var(--radius-sm);
-  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .theme-toggle-btn:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-
+/* 드롭다운 */
 .theme-dropdown {
-  display: none; /* 기본 숨김 */
   position: absolute;
   top: 100%;
   right: 0;
@@ -95,11 +103,9 @@
   z-index: 100;
 }
 
-
 .theme-dropdown.open {
   display: block;
 }
-
 
 .theme-dropdown li {
   padding: 8px 16px;
@@ -107,25 +113,20 @@
   color: var(--color-text);
   cursor: pointer;
   transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
-
 
 .theme-dropdown li:hover {
   background-color: var(--color-lace-cap);
   color: var(--color-white);
 }
 
-
 .theme-dropdown li.active {
   font-weight: 600;
   background-color: var(--color-kimchi);
   color: var(--color-white);
-}
-
-
-.theme-dropdown li .checkmark {
-  float: right;
-  opacity: 0.6;
 }
 
 /* Custom Cursor */

@@ -160,3 +160,30 @@ img {
   .t3 { font-size: 24px; }
   .section { padding: 64px 24px; }
 }
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  transition: transform 0.2s ease;
+  color: inherit;
+}
+
+.icon-60 { font-size: 60px; }
+.icon-48 { font-size: 48px; }
+.icon-36 { font-size: 36px; }
+.icon-30 { font-size: 30px; }
+.icon-24 { font-size: 24px; }
+.icon-20 { font-size: 20px; }
+.icon-18 { font-size: 18px; }
+.icon-16 { font-size: 16px; }
+
+.icon-left { margin-right: 6px; }
+.icon-right { margin-left: 6px; }
+
+.icon-rotate {
+  transition: transform 0.3s ease;
+}
+.icon-rotate.open {
+  transform: rotate(180deg);
+}

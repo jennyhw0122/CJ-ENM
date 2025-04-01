@@ -5,20 +5,39 @@
   <title>YES24</title>
   <link rel="stylesheet" href="../css/common.css" />
   <link rel="stylesheet" href="../css/component.css" />
-  <link rel="stylesheet" href="../css/yes24.css" />
+  <link rel="stylesheet" href="/css/index.css" />
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
 </head>
+
 <body>
   <header class="header">
     <div class="container">
-      <a href="/index.html"">JIWON HWANG</a>
+      <a href="/" class="logo no-hover">JIWON HWANG</a>
       <nav class="nav">
         <ul class="nav-list">
-          <li><a href="../index.html">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="/html/project.html">Projects</a></li>
           <li><a href="#about">About Me</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li class="theme-dropdown-wrapper">
+            <div class="theme-selector">
+              <button class="theme-toggle-btn" id="theme-dropdown-btn">
+                <iconify-icon icon="ph:moon-stars-bold" class="icon icon-20 icon-left"></iconify-icon>
+                Theme
+                <iconify-icon icon="mdi:chevron-down" class="icon icon-16 icon-right icon-rotate"></iconify-icon>
+              </button>
+              <ul class="theme-dropdown" id="theme-dropdown">
+                <li data-theme="light" class="active">
+                  <iconify-icon icon="ph:sun-bold" class="icon icon-18 icon-left"></iconify-icon>
+                  Light
+                </li>
+                <li data-theme="dark">
+                  <iconify-icon icon="ph:moon-bold" class="icon icon-18 icon-left"></iconify-icon>
+                  Dark
+                </li>
+              </ul>
+            </div>
+          </li>
         </ul>
       </nav>
     </div>
@@ -162,15 +181,22 @@
       <i class="material-icons">arrow_upward</i>
     </button>
   </section>
-    <div class="custom-cursor">
-      <span class="cursor-text">See Project</span>
-    </div>
-    <script src="../js/cursor.js"></script>
-    <script src="../js/global.js"></script>
-  </body>
-  <footer class="footer">
-    <div class="footer-container">
-      <!-- Footer 내용 미정 -->
-    </div>
-  </footer>
-  </html>
+
+  
+  <!-- 커스텀 커서 -->
+  <div class="custom-cursor">
+    <span class="cursor-text">See Project</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../js/cursor.js"></script>
+  <script src="../js/global.js"></script>
+</body>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    © 2025 JIWON HWANG · Portfolio
+  </div>
+</footer>
+</html>
