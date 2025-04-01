@@ -45,12 +45,14 @@
 
   <!-- Main -->
   <main class="ux-case-study">
-    <section class="intro text-center fade-in">
-      <p class="t4">
-        여행을 계획하는 순간은 설레야 한다.<br>
-        그런데, 사용자의 <span class="highlight">35%</span>는 예약 도중 떠날까요?
-      </p>
+    <section class="intro text-center">
+      <p class="t1">
+        여행을 계획하는 순간은 설레야 한다.<br/>
+        그런데, 사용자의 <span class="highlight">35%</span>는 예약 도중 떠날까요?</p>
       <iconify-icon icon="solar:diamond-bold" class="divider-icon"></iconify-icon>
+      <div class="scroll-down" onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });">
+        <iconify-icon icon="mdi:chevron-down" class="icon icon-24"></iconify-icon>
+      </div>
     </section>
   </main>
 
@@ -179,26 +181,25 @@
     </section>
   </main>
 
-  <!-- 뒤로가기 버튼 -->
-  <section class="back-button-section">
-    <button class="button button--secondary" onclick="history.back()">
-      <span class="material-icons">arrow_back</span>
-      이전 페이지로 돌아가기
-    </button>
-  </section>
+<!-- 뒤로가기 버튼 -->
+<section class="back-button-section">
+  <button class="button button--secondary" onclick="history.back()">
+    <iconify-icon icon="mdi:arrow-left" class="icon icon-20 icon-left"></iconify-icon>
+    이전 페이지로 돌아가기
+  </button>
+</section>
 
-  <!-- 스크롤 탑 -->
-  <section class="scroll-top-section">
-    <button class="scroll-top-button" id="scrollTopButton" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
-      <i class="material-icons">arrow_upward</i>
-    </button>
-  </section>
+<!-- 스크롤 탑 버튼 -->
+<section class="scroll-top-section">
+  <button class="scroll-top-button" id="scrollTopButton" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+    <iconify-icon icon="mdi:arrow-up" class="icon icon-20"></iconify-icon>
+  </button>
+</section>
 
   <!-- 커스텀 커서 -->
   <div class="custom-cursor">
     <span class="cursor-text">See Project</span>
   </div>
-
 
   <!-- Scripts -->
   <script src="../js/cursor.js"></script>

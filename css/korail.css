@@ -1,6 +1,80 @@
-.divider-icon {
+.ux-case-study .intro {
+  min-height: 90vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-lg);
+  text-align: center;
+  position: relative;
+  padding-bottom: 64px;
+}
+
+.highlight {
   color: var(--color-kimchi);
-  font-size: 24px;
+  font-weight: 700;
+}
+
+.divider-icon {
+  font-size: 28px;
   margin-top: var(--space-md);
-  display: inline-block;
+  color: var(--color-kimchi);
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 16px;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+
+.icon-24 {
+  font-size: 60px;
+  color: var(--color-kimchi);
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+
+.next-section {
+  min-height: 100vh;
+  padding: var(--space-section) var(--space-xl);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.intro {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-lg);
+  text-align: center;
+  position: relative;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section {
+  margin: 100px 0;          
+  padding: 60px 48px;       
+}
+@media (max-width: 768px) {
+  .section {
+    padding: 48px 24px;
+    margin: 64px 0;
+  }
 }
