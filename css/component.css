@@ -2,9 +2,9 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(25, 24, 29, 0.5);
+  background: var(--color-header-bg);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--color-header-border);
   scroll-behavior: smooth;
   align-items: center;
   justify-content: space-between;
@@ -19,8 +19,8 @@
 
 .logo {
   font-size: 24px;
-  color: var(--color-white);
   font-weight: 700;
+  color: var(--color-link);
   margin-right: auto;
 }
 
@@ -37,7 +37,7 @@
 
 .nav-list li a {
   text-decoration: none;
-  color: var(--color-white);
+  color: var(--color-link);
   font-size: 16px;
   position: relative;
   transition: color 0.3s ease;
@@ -59,11 +59,81 @@
   width: 100%;
 }
 
+.theme-dropdown-wrapper {
+  position: relative;
+}
+
+/* 드롭다운 버튼 (Theme ▾) */
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  color: var(--color-link);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  transition: background-color 0.2s ease;
+}
+
+.theme-toggle-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+
+.theme-dropdown {
+  display: none; /* 기본 숨김 */
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 8px 0;
+  margin-top: 8px;
+  min-width: 120px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+
+.theme-dropdown.open {
+  display: block;
+}
+
+
+.theme-dropdown li {
+  padding: 8px 16px;
+  font-size: 14px;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+
+.theme-dropdown li:hover {
+  background-color: var(--color-lace-cap);
+  color: var(--color-white);
+}
+
+
+.theme-dropdown li.active {
+  font-weight: 600;
+  background-color: var(--color-kimchi);
+  color: var(--color-white);
+}
+
+
+.theme-dropdown li .checkmark {
+  float: right;
+  opacity: 0.6;
+}
+
+/* Custom Cursor */
 .custom-cursor {
   position: fixed;
   width: 20px;
   height: 20px;
-  background: white;
+  background: var(--color-text);
   border-radius: 50%;
   pointer-events: none;
   transform: translate(-50%, -50%);
@@ -76,7 +146,7 @@
 
 .custom-cursor .cursor-text {
   font-size: 12px;
-  color: white;
+  color: var(--color-text);
   opacity: 0;
   transition: opacity 0.2s ease;
   pointer-events: none;
@@ -89,4 +159,3 @@
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
-

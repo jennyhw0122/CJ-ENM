@@ -7,18 +7,76 @@
   --color-deep-sea: #006ECD;
   --color-black: #19181D;
   --color-gray: #999999;
+
+  /* Light Mode Tokens */
+  --color-bg: var(--color-white);
+  --color-text: var(--color-black);
+  --color-header-bg: rgba(255, 255, 255, 0.7);
+  --color-header-border: rgba(0, 0, 0, 0.1);
+  --color-link: var(--color-black);
+  --color-link-hover: var(--color-kimchi);
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  /* Spacing */
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-xxl: 48px;
+  --space-section: 96px;
+}
+
+/* Dark Mode Variables */
+[data-theme="dark"] {
+  --color-bg: var(--color-black);
+  --color-text: var(--color-white);
+  --color-header-bg: rgba(25, 24, 29, 0.6);
+  --color-header-border: rgba(255, 255, 255, 0.1);
+  --color-link: var(--color-white);
+  --color-link-hover: var(--color-cj-yellow);
+  --color-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
 }
 
 html, body {
   font-family: 'CJ ONLYONE NEW body', 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: var(--color-white);
-  color: var(--color-white);
-  line-height: 1.6;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
   font-size: 16px;
   scroll-behavior: smooth;
 }
 
-/* CJ 폰트 등록 */
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: var(--color-link-hover);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Font Families */
 @font-face {
   font-family: 'CJ ONLYONE NEW body';
   src: url('../fonts/cjonlyone/CJONLYONENEWbodyRegular.woff') format('woff');
@@ -47,90 +105,26 @@ html, body {
   font-style: normal;
 }
 
+/* Text Styles */
 .t1 {
   font-family: 'Pretendard', sans-serif;
   font-weight: 600;
   font-size: 56px;
   line-height: 140%;
 }
+.t2 { font-size: 48px; font-weight: 600; line-height: 140%; }
+.t3 { font-size: 36px; font-weight: 600; line-height: 140%; }
+.t4 { font-size: 24px; font-weight: 400; line-height: 140%; }
+.t5 { font-size: 22px; font-weight: 400; line-height: 150%; }
+.t6 { font-size: 18px; font-weight: 400; line-height: 150%; }
+.t7 { font-size: 16px; font-weight: 400; line-height: 150%; }
 
-.t2 {
-  font-family: 'Pretendard', sans-serif;
-  font-weight: 600;
-  font-size: 48px;
-  line-height: 140%;
-}
+/* Text Alignment */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
 
-.t3 {
-  font-family: 'Pretendard', sans-serif;
-  font-weight: 600;
-  font-size: 36px;
-  line-height: 140%;
-}
-
-.t4 {
-  font-family: 'CJ ONLYONE NEW body', sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 140%;
-}
-
-.t5 {
-  font-family: 'CJ ONLYONE NEW body', sans-serif;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 150%;
-}
-
-.t6 {
-  font-family: 'CJ ONLYONE NEW body', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 150%;
-}
-
-.t7 {
-  font-family: 'CJ ONLYONE NEW body', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-}
-
-  /* Radius */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-full: 9999px;
-
-  /* Spacing */
-  --space-xxs: 4px;
-  --space-xs: 8px;
-  --space-sm: 12px;
-  --space-md: 16px;
-  --space-lg: 24px;
-  --space-xl: 32px;
-  --space-xxl: 48px;
-  --space-section: 96px;
-}
-
-* {
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  margin: 0;
-  padding: 0;
-}
-
-.text-center {
-  text-align: center;
-}
-.text-right {
-  text-align: right;
-}
-.text-left {
-  text-align: left;
-}
-
+/* Margin & Padding */
 .mt-0 { margin-top: 0 !important; }
 .mt-sm { margin-top: var(--space-sm) !important; }
 .mt-md { margin-top: var(--space-md) !important; }
@@ -147,35 +141,13 @@ html, body {
 .p-md { padding: var(--space-md); }
 .p-lg { padding: var(--space-lg); }
 
+/* Border Radius */
 .rounded-sm { border-radius: var(--radius-sm); }
 .rounded-md { border-radius: var(--radius-md); }
 .rounded-lg { border-radius: var(--radius-lg); }
 .rounded-full { border-radius: var(--radius-full); }
 
-a {
-  color: inherit;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-a:hover {
-  color: var(--color-cj-yellow);
-}
-.material-icons {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 1;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
+/* Responsive Typography */
 @media (max-width: 1024px) {
   .t1 { font-size: 42px; }
   .t2 { font-size: 36px; }
