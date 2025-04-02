@@ -93,28 +93,13 @@
         여행을 계획하는 순간은 설레야 하지만, 
         <strong class="highlight-percentage">
           <iconify-icon icon="mdi:account-remove-outline" class="icon icon-18 icon-left"></iconify-icon>
-          사용자의 35%
-        </strong>
-        는 예약 도중 떠났다.
-      </p>
-      <p class="t6">
-        코레일톡 기획자의 의도는 ‘지역 기반 기차 여행 활성화’였고, 명확한 예약 플로우를 제공하고자 했다.
-      </p>
-      <p class="t6">
-        하지만 실제 사용자의 행동은 이렇게 흐르고 있었다:
-      </p>
-      <div class="user-quote t6">
-        “선택한 정보들이 초기화되어 다시 처음부터 입력해야 해서 피곤했다.”
-      </div>
-      <div class="user-quote t6">
-        “뒤로 가면 처음으로 돌아가서 짜증 난다.”
-      </div>
-      <p class="t6">
-        <strong>이탈의 원인</strong>은 단계 수가 아니라, 선택 이후 흐름이 끊긴 구조에 있었다.
-      </p>
-      <p class="t6">
-        사용자가 원하는 정보를 선택한 후, 다시 사라지는 경험은 감정 흐름을 단절시키고, 서비스에 대한 신뢰도에도 부정적인 영향을 끼쳤습니다.
-      </p>
+          사용자의 35% </strong> 는 예약 도중 떠났다. </p>
+      <p class="t6"> 코레일톡 기획자의 의도는 ‘지역 기반 기차 여행 활성화’였고, 명확한 예약 플로우를 제공하고자 했다. </p>
+      <p class="t6"> 하지만 실제 사용자의 행동은 이렇게 흐르고 있었다: </p>
+      <div class="user-quote t6"> “선택한 정보들이 초기화되어 다시 처음부터 입력해야 해서 피곤했다.” </div>
+      <div class="user-quote t6"> “뒤로 가면 처음으로 돌아가서 짜증 난다.” </div>
+      <p class="t6"> <strong>이탈의 원인</strong>은 단계 수가 아니라, 선택 이후 흐름이 끊긴 구조에 있었다. </p>
+      <p class="t6"> 사용자가 원하는 정보를 선택한 후, 다시 사라지는 경험은 감정 흐름을 단절시키고, 서비스에 대한 신뢰도에도 부정적인 영향을 끼쳤습니다. </p>
       <p class="t6">
         <strong><iconify-icon icon="mdi:alert-octagon-outline" class="icon icon-18 icon-left"></iconify-icon>감정 흐름 단절 포인트</strong>
       </p>
@@ -130,20 +115,54 @@
     </section>
 
     <!-- 사용자 조사 -->
-    <section class="user-research section">
-      <h2 class="t3">사용자 조사 | 행동 + 감정 데이터를 통해 흐름을 추적했다</h2>
-      <p class="t6"><strong>조사 방식</strong></p>
-      <ul class="t6">
-        <li>앱 리뷰 크롤링 129건</li>
-        <li>Google 설문조사 + 미션형 인터뷰 30명</li>
-      </ul>
-      <p class="t6"><strong>주요 인사이트</strong></p>
-      <ol class="t6">
-        <li>리뷰 키워드 분석<br>예약/UX 문제 비중: <strong>43.1%</strong><br>주요 항목: 복잡한 예약 구조: 43.6%</li>
-        <li>정량 설문 결과(형식: 점수카드)<br>예약 화면 직관성: 2.47점<br>예약 단계 과다: 2.53점<br>정보 접근성: 2.50점</li>
-      </ol>
-      <p class="t6">→ 특히 <strong>정보 접근성과 직관성이 낮았던 사용자일수록, 재사용 의향도 낮았음.</strong></p>
-      <p class="t6">→ ‘한 번 써봤는데 복잡해서 다시 쓰고 싶지 않다’는 흐름이 드러남.</p>
+<section class="user-insight section">
+  <h2 class="t3"> 사용자 인사이트 </h2>
+  <div class="insight-grid">
+    <!-- 도넛 -->
+    <div class="insight-card">
+      <h3 class="t6 card-title">복잡한 예약 구조</h3>
+      <div class="donut-container" data-value="43.6">
+        <svg viewBox="0 0 36 36" class="donut-chart">
+          <circle class="donut-bg" cx="18" cy="18" r="15.915"></circle>
+          <circle class="donut-segment" cx="18" cy="18" r="15.915" stroke-dasharray="0 100"></circle>
+        </svg>
+        <div class="donut-center">
+          <span class="donut-percent">0%</span>
+        </div>
+      </div>
+      <p class="t7 text-center">
+        리뷰 중 "복잡한 예약 구조"가 <strong class="highlight-orange">43.6%</strong> 차지
+      </p>
+    </div>
+
+    <!-- 정량 설문 -->
+    <div class="insight-card">
+      <h3 class="t6 card-title">정량 설문 결과</h3>
+      <div class="score-card">
+        <p class="t7">예약 화면 직관성</p>
+        <span class="score" data-score="2.47">0.00</span>
+      </div>
+      <div class="score-card">
+        <p class="t7">예약 단계 과다</p>
+        <span class="score" data-score="2.53">0.00</span>
+      </div>
+      <div class="score-card">
+        <p class="t7">정보 접근성</p>
+        <span class="score" data-score="2.50">0.00</span>
+      </div>
+    </div>
+  </div>
+</section>
+    
+      <!-- 하단 인사이트 텍스트 -->
+      <p class="t6">
+        <iconify-icon icon="mdi:arrow-right-bold" class="icon icon-16 icon-left"></iconify-icon>
+        특히 <strong>정보 접근성과 직관성이 낮았던 사용자일수록, 재사용 의향도 낮았음.</strong>
+      </p>
+      <p class="t6">
+        <iconify-icon icon="mdi:arrow-right-bold" class="icon icon-16 icon-left"></iconify-icon>
+        ‘한 번 써봤는데 복잡해서 다시 쓰고 싶지 않다’는 흐름이 드러남.
+      </p>
     </section>
 
     <!-- UX 가설 -->
