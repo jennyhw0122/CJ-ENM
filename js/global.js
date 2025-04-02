@@ -12,18 +12,19 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   requestAnimationFrame(raf);
 
-  // Fade-in Observer
-  const fadeObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        fadeObserver.unobserve(entry.target);
-      }
+  document.addEventListener("DOMContentLoaded", () => {
+    const fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          fadeObserver.unobserve(entry.target); // 1회만 작동
+        }
+      });
+    }, { threshold: 0.1 });
+  
+    document.querySelectorAll(".fade-in").forEach((el) => {
+      fadeObserver.observe(el);
     });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll(".fade-in").forEach((el) => {
-    fadeObserver.observe(el);
   });
 
   // Theme 변경
