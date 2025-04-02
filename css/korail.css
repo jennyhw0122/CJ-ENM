@@ -116,44 +116,122 @@
   }
 }
 
-.problem-definition .highlight-percentage {
+.problem-definition {
+  padding: var(--space-section) var(--space-xl);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.problem-definition h2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  line-height: 1.4;
+  margin-bottom: 24px;
+  color: var(--color-text);
+}
+
+.problem-definition .t6 {
+  margin: 8px 0;
+  color: var(--color-text);
+}
+
+.highlight-percentage {
   color: var(--color-kimchi);
-  font-weight: 700;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .user-quote {
-  background: #f4f4f4;
-  padding: var(--space-md) var(--space-lg);
-  border-radius: 16px 16px 16px 0;
-  border-left: 4px solid var(--color-kimchi);
-  margin: var(--space-md) 0;
-  font-style: italic;
   position: relative;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  margin: var(--space-sm) 0;
+  line-height: 1.6;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  display: inline-block;
+  max-width: 100%; 
 }
 
 .user-quote::before {
   content: '';
   position: absolute;
-  left: 16px;
   bottom: -10px;
-  width: 16px;
-  height: 16px;
-  background: #f4f4f4;
+  left: 40px;
+  width: 20px;
+  height: 20px;
+  background: var(--color-bg);
+  border: 1px solid rgba(0,0,0,0.1);
+  border-top: none;
+  border-left: none;
   transform: rotate(45deg);
-  border-left: 4px solid var(--color-kimchi);
-  border-bottom: none;
+  z-index: 0;
+  box-shadow: inherit; 
 }
 
 .ux-breakdown-flow {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 12px;
   margin-top: var(--space-sm);
   font-weight: 500;
+  font-size: 16px;
+  color: var(--color-text);
 }
 
 .arrow-icon {
+  font-size: 16px;
   color: var(--color-gray);
   transform: translateY(1px);
+}
+
+/* 아이콘 기본 정렬 */
+.iconify-icon.icon {
+  vertical-align: middle;
+  font-size: 18px;
+  color: var(--color-text);
+}
+
+/* 반응형 대응 */
+@media (max-width: 768px) {
+  .problem-definition {
+    padding: 64px 20px;
+  }
+
+  .problem-definition h2 {
+    font-size: 22px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .highlight-percentage {
+    font-size: 15px;
+  }
+
+  .user-quote {
+    font-size: 15px;
+    padding: 14px 16px;
+  }
+
+  .user-quote::before {
+    width: 14px;
+    height: 14px;
+    left: 20px;
+  }
+
+  .ux-breakdown-flow {
+    font-size: 15px;
+    gap: 8px;
+  }
+
+  .arrow-icon {
+    font-size: 14px;
+  }
 }
