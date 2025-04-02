@@ -7,6 +7,17 @@ body {
   font-family: var(--font-family);
 }
 
+.section {
+  padding: 96px 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .section {
+    padding: 64px 20px;
+  }
+}
+
 .iconify-icon.icon {
   vertical-align: middle;
   font-size: 18px;
@@ -97,229 +108,320 @@ body {
   50% { transform: translateY(10px); }
 }
 
-/* --------------------
-   2. Summary Card
--------------------- */
+
+/* ----------------------------
+   Summary Cards
+----------------------------- */
 .summary-grid {
   display: flex;
-  justify-content: space-between;
-  align-items: stretch;
   flex-wrap: wrap;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 3rem 2rem;
+  gap: 24px;
+  justify-content: space-between;
 }
-
-.summary-item {
-  flex: 1 1 calc(25% - 2rem);
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 20px;
-  padding: 2.5rem 1.5rem;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.summary-card {
+  flex: 1 1 calc(25% - 24px);
   min-width: 220px;
+  background-color: var(--color-light-bg);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  border: 1px solid #ddd;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
 }
-.summary-item:hover {
+.summary-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
 }
-
-.summary-item iconify-icon {
-  font-size: 24px;
-  color: var(--color-primary, #ff6b00);
-  margin-bottom: 1rem;
-  display: block;
-}
-
-.summary-item h3 {
-  font-size: 1.25rem;
-  margin: 0.5rem 0 1rem;
-  font-weight: 600;
-}
-.summary-item p {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-/* 세로 바 */
-.summary-bar {
-  position: absolute;
-  top: 15%;
-  bottom: 15%;
-  right: -1rem;
-  width: 3px;
-  background: var(--color-primary, #ff6b00);
-  border-radius: 2px;
-  opacity: 0.25;
-}
-.summary-item:last-child .summary-bar {
-  display: none;
-}
-
-/* --------------------
-   3. 문제 정의 섹션
--------------------- */
-.problem-definition {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 80px 24px; /* 전체 여백 조정 */
-  text-align: left;   /* 왼쪽 정렬 */
-}
-
-.problem-definition h2 {
+.icon-bar {
   display: flex;
   align-items: center;
-  gap: 12px;
-  line-height: 1.4;
-  margin-bottom: 24px;
-  color: var(--color-text);
-  text-align: left; /* 중간 정렬 방지 */
+  margin-bottom: 1rem;
+}
+.vertical-bar {
+  width: 4px;
+  height: 40px;
+  background-color: var(--color-kimchi);
+  margin-right: 12px;
+  border-radius: 2px;
+}
+.card-icon {
+  font-size: 24px;
+  color: var(--color-kimchi);
 }
 
-.problem-definition .t6 {
-  margin: 12px 0;
-  text-align: left;
-  color: var(--color-text);
-  line-height: 1.6;
+/* ----------------------------
+   Problem Definition
+----------------------------- */
+.problem-definition p {
+  margin-bottom: 1.25rem;
 }
-
-/* 말풍선 */
-/* 말풍선 전체 감싸는 영역 */
-.user-quotes-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: 24px;
-  flex-wrap: wrap;
-  margin: var(--space-md) 0;
-}
-
-/* 기본 말풍선 */
 .user-quote {
-  position: relative;
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: var(--radius-md);
-  padding: var(--space-md) var(--space-lg);
-  max-width: 45%;
+  max-width: 680px;
+  margin: 1.5rem auto;
+  padding: 20px 24px;
+  border-radius: 16px;
+  background-color: var(--color-light-bg);
+  font-size: 1rem;
+  font-weight: 400;
   line-height: 1.6;
-  font-size: 16px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  color: var(--color-text);
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* 왼쪽 말풍선 꼬리 */
-.user-quote.left::before {
+/* 꼬리 (왼쪽) */
+.user-quote.left::after {
   content: '';
   position: absolute;
-  top: 50%;
-  left: -10px;
-  transform: translateY(-50%) rotate(45deg);
-  width: 16px;
-  height: 16px;
-  background: var(--color-bg);
-  border-left: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  z-index: 0;
+  left: 28px;
+  bottom: -10px;
+  border-width: 10px 10px 0;
+  border-style: solid;
+  border-color: var(--color-light-bg) transparent transparent transparent;
 }
 
-/* 오른쪽 말풍선 꼬리 */
-.user-quote.right::before {
+/* 꼬리 (오른쪽) */
+.user-quote.right::after {
   content: '';
   position: absolute;
-  top: 50%;
-  right: -10px;
-  transform: translateY(-50%) rotate(45deg);
-  width: 16px;
-  height: 16px;
-  background: var(--color-bg);
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
-  z-index: 0;
-  margin-top: 12px;
+  right: 28px;
+  bottom: -10px;
+  border-width: 10px 10px 0;
+  border-style: solid;
+  border-color: var(--color-light-bg) transparent transparent transparent;
 }
 
+.ux-breakdown-flow {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+/* 다크모드 배경 조정 */
+[data-theme="dark"] .user-quote {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+[data-theme="dark"] .user-quote.left::after,
+[data-theme="dark"] .user-quote.right::after {
+  border-color: rgba(255, 255, 255, 0.08) transparent transparent transparent;
+}
+
+
+/* ----------------------------
+   User Insight / Charts
+----------------------------- */
+.insight-grid {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.insight-card {
+  flex: 1 1 48%;
+  background-color: var(--color-light-bg);
+  padding: 32px;
+  border-radius: 16px;
+  border: 1px solid #ddd;
+}
+.score-card {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.score {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* 도넛 차트 */
+.donut-container {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 1rem;
+  position: relative;
+}
+.donut-chart {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+.donut-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 3;
+}
+.donut-segment {
+  fill: none;
+  stroke: var(--color-kimchi);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 0 100;
+}
+.donut-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.donut-percent {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-kimchi);
+}
+
+/* ----------------------------
+   플로우 비교
+----------------------------- */
+.flow-horizontal-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.flow-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.flow-label {
+  font-weight: 700;
+  min-width: 50px;
+}
+.flow-track {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.flow-step {
+  padding: 8px 16px;
+  background-color: var(--color-light-bg);
+  border: 1px solid #ddd;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+}
+.flow-arrow {
+  color: #999;
+  font-size: 1rem;
+}
+
+
+
+/* 결과 그래프 전체 컨테이너 */
+.metric-graph-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 48px;
+  margin-top: 3rem;
+  padding: 0 1rem;
+}
+
+/* 각 성과 항목 박스 */
+.metric-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 180px;
+}
+
+/* 변화 수치 강조 */
+.metric-headline {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.metric-headline.positive {
+  color: var(--color-kimchi);
+}
+.metric-headline.negative {
+  color: var(--color-gray);
+}
+
+/* 막대 배경 */
+.bar-track {
+  width: 40px;
+  height: 180px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+/* 채워지는 바 */
+.bar-fill {
+  width: 100%;
+  border-radius: 20px;
+  transition: height 1.5s ease;
+}
+
+/* 막대 기본 색상 지정 */
+.bar-fill.old {
+  background-color: #ccc;
+}
+.bar-fill.new {
+  background-color: var(--color-kimchi);
+}
+
+/* 각각 항목의 높이 정의 (데이터 기반) */
+.rate1 { height: 54%; }
+.rate2 { height: 61%; }
+.rate3 { height: 12%; }
+.rate4 { height: 0%; } 
+.rate5 { height: 61%; } 
+.rate6 { height: 40%; } 
+
+/* 하단 텍스트 */
+.metric-label {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+.metric-value {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* 분석 주석 텍스트 */
+.insight-note {
+  margin-top: 3rem;
+  font-size: 0.95rem;
+  text-align: center;
+  color: var(--color-gray);
+  line-height: 1.6;
+}
 
 /* 반응형 */
 @media (max-width: 768px) {
-  .user-quote {
-    max-width: 100%;
-    font-size: 15px;
-  }
-
-  .user-quotes-wrapper {
-    flex-direction: column;
-  }
-
-  .user-quote.left::before,
-  .user-quote.right::before {
-    left: 20px;
-    right: auto;
-    transform: translateY(0%) rotate(45deg);
-    top: auto;
-    bottom: -10px;
-    border-left: 1px solid rgba(0, 0, 0, 0.1);
-    border-top: none;
-    border-right: none;
+  .metric-bar {
+    width: 100%;
+    max-width: 220px;
   }
 }
 
-/* --------------------
-   4. Fade-in
--------------------- */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease;
+/* ----------------------------
+  Scroll Top Button
+----------------------------- */
+.scroll-top-button {
+  background-color: var(--color-kimchi);
+  color: white;
+  padding: 16px;
+  border-radius: 50%;
+  border: none;
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  cursor: pointer;
+  z-index: 99;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
 }
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
+.scroll-top-button:hover {
+  transform: scale(1.1);
 }
 
-/* --------------------
-   반응형
--------------------- */
-@media (max-width: 1024px) {
-  .summary-item {
-    flex: 1 1 calc(50% - 1rem);
-  }
-}
-@media (max-width: 640px) {
-  .summary-item {
-    flex: 1 1 100%;
-  }
-  .summary-bar {
-    display: none;
-  }
-  .problem-definition {
-    padding: 64px 20px;
-  }
-  .problem-definition h2 {
-    font-size: 22px;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  .highlight-percentage {
-    font-size: 15px;
-  }
-  .user-quote {
-    font-size: 15px;
-    padding: 14px 16px;
-  }
-  .user-quote::before {
-    width: 14px;
-    height: 14px;
-    left: 20px;
-  }
-  .ux-breakdown-flow {
-    font-size: 15px;
-    gap: 8px;
-  }
-  .arrow-icon {
-    font-size: 14px;
-  }
-}
+
+

@@ -1,5 +1,7 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Lenis 스크롤
+// ------------------------------
+// Lenis 부드러운 스크롤 (선택)
+// ------------------------------
+if (window.Lenis) {
   const lenis = new Lenis({
     duration: 1.2,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -11,127 +13,128 @@ document.addEventListener("DOMContentLoaded", () => {
     requestAnimationFrame(raf);
   }
   requestAnimationFrame(raf);
+}
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const fadeObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          fadeObserver.unobserve(entry.target); // 1회만 작동
-        }
-      });
-    }, { threshold: 0.1 });
-  
-    document.querySelectorAll(".fade-in").forEach((el) => {
-      fadeObserver.observe(el);
-    });
-  });
-
-  // Theme 변경
-  const root = document.documentElement;
-  const toggleBtn = document.getElementById("theme-dropdown-btn");
-  const dropdown = document.getElementById("theme-dropdown");
-  const themeItems = dropdown?.querySelectorAll("li");
-
-  toggleBtn?.addEventListener("click", (e) => {
-    e.stopPropagation();
-    dropdown.classList.toggle("open");
-  });
-
-  themeItems?.forEach((item) => {
-    item.addEventListener("click", () => {
-      const selectedTheme = item.getAttribute("data-theme");
-      root.setAttribute("data-theme", selectedTheme);
-      localStorage.setItem("theme", selectedTheme);
-
-      themeItems.forEach((el) => el.classList.remove("active"));
-      item.classList.add("active");
-      dropdown.classList.remove("open");
-    });
-  });
-
-  document.addEventListener("click", (e) => {
-    if (!dropdown.contains(e.target) && !toggleBtn.contains(e.target)) {
-      dropdown.classList.remove("open");
+// ------------------------------
+// Fade-in Observer
+// ------------------------------
+const fadeObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+      fadeObserver.unobserve(entry.target);
     }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll(".fade-in").forEach((el) => fadeObserver.observe(el));
+
+// ------------------------------
+// 다크모드 드롭다운 (로컬스토리지 기반)
+// ------------------------------
+const root = document.documentElement;
+const toggleBtn = document.getElementById("theme-dropdown-btn");
+const dropdown = document.getElementById("theme-dropdown");
+const themeItems = dropdown?.querySelectorAll("li");
+
+toggleBtn?.addEventListener("click", (e) => {
+  e.stopPropagation();
+  dropdown.classList.toggle("open");
+});
+
+themeItems?.forEach((item) => {
+  item.addEventListener("click", () => {
+    const selectedTheme = item.getAttribute("data-theme");
+    root.setAttribute("data-theme", selectedTheme);
+    localStorage.setItem("theme", selectedTheme);
+
+    themeItems.forEach((el) => el.classList.remove("active"));
+    item.classList.add("active");
+    dropdown.classList.remove("open");
   });
 });
 
-// 점수 카운트 애니메이션
-function animateScore(el, target, duration = 1000) {
-  const frameRate = 1000 / 60;
-  const totalFrames = Math.round(duration / frameRate);
-  let frame = 0;
+// 외부 클릭 시 드롭다운 닫기
+document.addEventListener("click", (e) => {
+  if (!dropdown.contains(e.target) && !toggleBtn.contains(e.target)) {
+    dropdown.classList.remove("open");
+  }
+});
 
-  const counter = setInterval(() => {
-    frame++;
-    const progress = frame / totalFrames;
-    const current = (target * progress).toFixed(2);
-    el.textContent = current;
-
-    if (frame === totalFrames) {
-      el.textContent = target.toFixed(2);
-      clearInterval(counter);
-    }
-  }, frameRate);
-}
-
-// 도넛 그래프 애니메이션
+// ------------------------------
+// 도넛 애니메이션
+// ------------------------------
 function animateDonut(container) {
-  console.log("도넛 애니메이션 시작"); // 디버깅용 로그
-
   const value = parseFloat(container.dataset.value);
-  const segment = container.querySelector(".donut-segment");
-  const percent = container.querySelector(".donut-percent");
+  const circle = container.querySelector('.donut-segment');
+  const label = container.querySelector('.donut-percent');
 
-  // 초기 세팅
-  segment.setAttribute("stroke-dasharray", `0 100`);
-  let frame = 0;
-  const frameRate = 1000 / 60;
-  const totalFrames = Math.round(1000 / frameRate);
+  const radius = 15.915;
+  const circumference = 2 * Math.PI * radius;
 
-  const counter = setInterval(() => {
-    frame++;
-    const progress = frame / totalFrames;
-    const current = (value * progress).toFixed(1);
-    segment.setAttribute("stroke-dasharray", `${current} ${100 - current}`);
-    percent.textContent = `${current}%`;
+  circle.style.strokeDasharray = `${circumference}`;
+  circle.style.strokeDashoffset = circumference;
 
-    if (frame === totalFrames) {
-      segment.setAttribute("stroke-dasharray", `${value} ${100 - value}`);
-      percent.textContent = `${value}%`;
-      clearInterval(counter);
+  let current = 0;
+  const interval = setInterval(() => {
+    if (current >= value) {
+      label.textContent = `${value.toFixed(1)}%`;
+      clearInterval(interval);
+    } else {
+      current += 0.5;
+      label.textContent = `${current.toFixed(1)}%`;
     }
-  }, frameRate);
+    const offset = circumference - (current / 100) * circumference;
+    circle.style.strokeDashoffset = offset;
+  }, 20);
 }
 
-// 트리거 (스크롤 진입 시 실행)
-function observeAndAnimate() {
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        console.log("관찰된 영역 진입"); 
-
-        // 도넛
-        const donut = document.querySelector(".donut-container");
-        if (donut) animateDonut(donut);
-
-        // 점수들
-        document.querySelectorAll(".score").forEach(score => {
-          const target = parseFloat(score.dataset.score);
-          animateScore(score, target);
-        });
-
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.0 });
-
-  const section = document.querySelector(".user-insight");
-  if (section) observer.observe(section);
+// ------------------------------
+// 정량 점수 애니메이션
+// ------------------------------
+function animateScore(el, target) {
+  let current = 0;
+  const interval = setInterval(() => {
+    if (current >= target) {
+      el.textContent = target.toFixed(2);
+      clearInterval(interval);
+    } else {
+      current += 0.05;
+      el.textContent = current.toFixed(2);
+    }
+  }, 20);
 }
 
-// 실행
-document.addEventListener("DOMContentLoaded", () => {
-  observeAndAnimate();
-});
+// ------------------------------
+// 사용자 조사 영역 진입 시 실행
+// ------------------------------
+const insightObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !entry.target.classList.contains("animated")) {
+      entry.target.classList.add("animated");
+
+      const donut = entry.target.querySelector(".donut-container");
+      if (donut) animateDonut(donut);
+
+      entry.target.querySelectorAll(".score").forEach(score => {
+        const target = parseFloat(score.dataset.score);
+        animateScore(score, target);
+      });
+
+      insightObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll(".insight-card").forEach(card => insightObserver.observe(card));
+
+// ------------------------------
+// 저장된 테마 불러오기
+// ------------------------------
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) {
+  root.setAttribute("data-theme", savedTheme);
+  themeItems?.forEach((item) => {
+    item.classList.toggle("active", item.getAttribute("data-theme") === savedTheme);
+  });
+}
