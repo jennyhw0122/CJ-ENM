@@ -46,7 +46,7 @@
   <!-- Main -->
   <main class="ux-case-study">
     <section class="intro text-center">
-      <p class="t1">
+      <p class="t2">
         여행을 계획하는 순간은 설레야 한다.<br/>
         그런데, 사용자의 <span class="highlight">35%</span>는 예약 도중 떠날까요?</p>
       <iconify-icon icon="solar:diamond-bold" class="divider-icon"></iconify-icon>
@@ -56,42 +56,91 @@
     </section>
   </main>
 
-    <!-- 프로젝트 개요 -->
-    <section class="project-summary section">
-      <h2 class="t3">프로젝트 개요</h2>
-      <table>
-        <tbody>
-          <tr><th class="t6">역할</th><td class="t6">프로덕트 디자이너 (UX 전략 · 조사 · 구조 설계 · UI)</td></tr>
-          <tr><th class="t6">프로젝트 기간</th><td class="t6">2024.12.16 ~ 2025.01.17 (4주간)</td></tr>
-          <tr><th class="t6">팀 구성</th><td class="t6">디자이너 4명· 개발자 1명</td></tr>
-          <tr><th class="t6">기여도</th><td class="t6">UX 전략/조사 40%, UI 설계 50%, 디자인 QA/협업 10%</td></tr>
-          <tr><th class="t6">도구</th><td class="t6">GA4, Figma, Notion, Google 설문, 웹 크롤링</td></tr>
-        </tbody>
-      </table>
-    </section>
+
+   <!-- 프로젝트 개요 -->
+   <section class="project-summary section">
+    <div class="summary-grid">
+      <div class="summary-item">
+        <h3 class="t3">역할</h3>
+        <p class="t6">프로덕트 디자이너</p>
+        <p class="t7">(UX 전략 · 조사 · 구조 설계 · UI)</p>
+      </div>
+
+      <div class="summary-item">
+        <h3 class="t3">기간</h3>
+        <p class="t6">2024.12.16 ~ 2025.01.17</p>
+        <p class="t7">(4주간)</p>
+      </div>
+
+      <div class="summary-item">
+        <h3 class="t3">팀 구성</h3>
+        <p class="t6">디자이너 4명 · 개발자 1명</p>
+      </div>
+
+      <div class="summary-item">
+        <h3 class="t3">도구</h3>
+        <p class="t6">GA4 · Figma · Notion · Google 설문 · 웹 크롤링</p>
+      </div>
+    </div>
+  </section>
 
     <!-- 문제 정의 -->
-    <section class="problem-definition section fade-in">
-      <h2 class="t3">문제 정의 | 사용자의 ‘선택 불확실성’이 예약을 방해했다</h2>
-      <p class="t6">여행을 계획하는 순간은 설레야 하지만, <strong>사용자의 35%는 예약 도중 떠났다.</strong></p>
-      <p class="t6">기획 의도는 ‘지역 기반 기차 여행 활성화’였고, 명확하고 빠른 예약 플로우를 제공하고자 했다.</p>
-      <p class="t6">하지만 실제 사용자의 행동은 이렇게 흐르고 있었다:</p>
-      <blockquote class="t6">“선택한 정보들이 초기화되어 다시 처음부터 입력해야 해서 피곤했다.”<br>“뒤로 가면 처음으로 돌아가서 짜증 난다.”</blockquote>
-      <p class="t6"><strong>이탈의 원인은 단계 수가 아니라, 선택 이후 흐름이 끊긴 구조에 있었다.</strong></p>
-      <p class="t6">사용자는 출발역과 인원 등 선택값을 입력했지만, 수정이 필요할 경우 ‘뒤로 가기’ 외에는 방법이 없었고, 이로 인해 <strong>선택값이 초기화되며 처음부터 다시 입력</strong>해야 했다.</p>
-      <p class="t6"><strong>감정 흐름 단절 포인트</strong></p>
-      <p class="t6">이 반복 구조는 선택 변경 불가능 → 정보 상실 → 심리적 피로 → 예약 중단이라는 <strong>구조적 UX 이탈 경로</strong>를 만들었다.</p>
+    <section class="problem-definition section">
+      <h2 class="t3">
+        <iconify-icon icon="mdi:alert-decagram-outline" class="icon icon-24 icon-left"></iconify-icon>
+        문제 정의 | 사용자의 ‘선택 불확실성’이 예약을 방해했다
+      </h2>
+      <p class="t6">
+        여행을 계획하는 순간은 설레야 하지만, 
+        <strong class="highlight-percentage">
+          <iconify-icon icon="mdi:account-remove-outline" class="icon icon-18 icon-left"></iconify-icon>
+          사용자의 35%
+        </strong>
+        는 예약 도중 떠났다.
+      </p>
+      <p class="t6">
+        <iconify-icon icon="mdi:target-variant" class="icon icon-18 icon-left"></iconify-icon>
+        코레일톡 기획자의 의도는 ‘지역 기반 기차 여행 활성화’였고, 명확한 예약 플로우를 제공하고자 했다.
+      </p>
+      <p class="t6">
+        <iconify-icon icon="mdi:eye-outline" class="icon icon-18 icon-left"></iconify-icon>
+        하지만 실제 사용자의 행동은 이렇게 흐르고 있었다:
+      </p>
+      <blockquote class="user-quote t6">
+        “선택한 정보들이 초기화되어 다시 처음부터 입력해야 해서 피곤했다.”
+      </blockquote>
+      <blockquote class="user-quote t6">
+        “뒤로 가면 처음으로 돌아가서 짜증 난다.”
+      </blockquote>
+      <p class="t6">
+        <strong><iconify-icon icon="mdi:link-variant-off" class="icon icon-18 icon-left"></iconify-icon>이탈의 원인</strong>은 단계 수가 아니라, 선택 이후 흐름이 끊긴 구조에 있었다.
+      </p>
+      <p class="t6">
+        사용자가 원하는 정보를 선택한 후, 다시 사라지는 경험은 감정 흐름을 단절시키고, 서비스에 대한 신뢰도에도 부정적인 영향을 끼쳤습니다.
+      </p>
+      <p class="t6">
+        <strong><iconify-icon icon="mdi:alert-octagon-outline" class="icon icon-18 icon-left"></iconify-icon>감정 흐름 단절 포인트</strong>
+      </p>
+      <div class="ux-breakdown-flow t6">
+        <span>선택 변경 불가능</span>
+        <iconify-icon icon="mdi:arrow-right" class="icon icon-16 arrow-icon"></iconify-icon>
+        <span>정보 상실</span>
+        <iconify-icon icon="mdi:arrow-right" class="icon icon-16 arrow-icon"></iconify-icon>
+        <span>심리적 피로</span>
+        <iconify-icon icon="mdi:arrow-right" class="icon icon-16 arrow-icon"></iconify-icon>
+        <span>예약 중단</span>
+      </div>
     </section>
 
     <!-- 사용자 조사 -->
     <section class="user-research section">
-      <h2 class="t3">2. 사용자 조사 | 행동 + 감정 데이터를 통해 흐름을 추적했다</h2>
+      <h2 class="t3">사용자 조사 | 행동 + 감정 데이터를 통해 흐름을 추적했다</h2>
       <p class="t6"><strong>조사 방식</strong></p>
       <ul class="t6">
         <li>앱 리뷰 크롤링 129건</li>
-        <li>Google 설문 + 미션형 인터뷰 30명</li>
+        <li>Google 설문조사 + 미션형 인터뷰 30명</li>
       </ul>
-      <p class="t6"><strong>주요 인사이트 (형식: 도넛 차트)</strong></p>
+      <p class="t6"><strong>주요 인사이트</strong></p>
       <ol class="t6">
         <li>리뷰 키워드 분석<br>예약/UX 문제 비중: <strong>43.1%</strong><br>주요 항목: 복잡한 예약 구조: 43.6%</li>
         <li>정량 설문 결과(형식: 점수카드)<br>예약 화면 직관성: 2.47점<br>예약 단계 과다: 2.53점<br>정보 접근성: 2.50점</li>
@@ -102,13 +151,13 @@
 
     <!-- UX 가설 -->
     <section class="ux-hypothesis section">
-      <h2 class="t3">3. UX 가설 | 선택값 유지와 시각 요약 구조는, 사용자의 반복 입력 피로를 줄이고 예약 이탈을 방지할 수 있다.</h2>
-      <p class="t6">만약 사용자가 출발/도착역과 상세 인원 정보를 한 흐름에서 입력하고, 선택값이 유지되는 구조가 제공된다면, 선택 이후 반복 입력으로 인한 피로가 줄어들고 예약 완료율은 높아질 것이다.</p>
+      <h2 class="t3">UX 가설 | 사용자가 고른 정보가 이어질수록, 예약은 끊기지 않는다.</h2>
+      <p class="t6">출발역과 인원을 한 번에 선택하고, 선택한 정보가 흐름 속에서 유지된다면, 사용자는 반복 선택 없이 예약을 마무리할 수 있을 것이다.</p>
     </section>
 
     <!-- Before/After -->
     <section class="structure-change section">
-      <h2 class="t3">4. Before/After 구조 변화</h2>
+      <h2 class="t3">Before/After 구조 변화</h2>
       <table>
         <thead>
           <tr><th class="t6">항목</th><th class="t6">기존 UI</th><th class="t6">개선 UI</th></tr>
@@ -123,7 +172,7 @@
 
     <!-- 플로우 변경 -->
     <section class="flow-change section">
-      <h2 class="t3">5. 플로우 변경</h2>
+      <h2 class="t3">플로우 변경</h2>
       <p class="t6"><strong>기존 플로우 (11단계)</strong><br>메인화면 → 지역별 여행 → 상품목록 → 상품 상세 → 날짜 선택 → 인원/열차시간 → 패키지 선택 → 출/도착역 선택 → 상세 인원 선택 → 약관 동의 → 예약 정보</p>
       <p class="t6"><strong>개선 후 플로우 (9단계)</strong><br>메인화면 → 지역별 여행 → 상품목록 → 상품 상세 → 날짜 선택 → 출발·도착역 + 인원 선택 → 상품/패키지 선택 → 약관 동의 → 예약 완료</p>
       <p class="t6">→ <strong>단계 수가 줄어든 것이 아니라, 감정 흐름이 끊기지 않도록 재배열한 것</strong></p>
@@ -131,7 +180,7 @@
 
     <!-- 실험 결과 -->
     <section class="results section">
-      <h2 class="t3">6. 실험 결과 | 구조 설계로 행동이 바뀌었다</h2>
+      <h2 class="t3">실험 결과 | 구조 설계로 행동이 바뀌었다</h2>
       <table>
         <thead>
           <tr><th class="t6">항목</th><th class="t6">기존 UI</th><th class="t6">개선 UI</th><th class="t6">변화</th></tr>
@@ -147,7 +196,7 @@
 
     <!-- 전략적 확장 가능성 -->
     <section class="expansion section">
-      <h2 class="t3">7. 전략적 확장 가능성</h2>
+      <h2 class="t3">전략적 확장 가능성</h2>
       <table>
         <thead>
           <tr><th class="t6">적용 플랫폼</th><th class="t6">기대 효과</th></tr>
@@ -163,7 +212,7 @@
 
     <!-- 구조 설계의 실무적 가치 -->
     <section class="insights section">
-      <h2 class="t3">8. 구조 설계의 실무적 가치 요약</h2>
+      <h2 class="t3">구조 설계의 실무적 가치 요약</h2>
       <p class="t5"><strong>“사용자의 선택이 확신으로 바뀌는 그 순간을 설계한 구조 중심 UX 개선 사례입니다.”</strong></p>
       <p class="t6">뒤로 가기 평균 3.07회 → 2.00회, 예약 완료율 +7.18%p 상승이라는 정량적 변화로 설계 효과를 입증했습니다.</p>
 
@@ -179,7 +228,7 @@
         </tbody>
       </table>
     </section>
-  </main>
+  </main> 
 
 <!-- 뒤로가기 버튼 -->
 <section class="back-button-section">
@@ -204,6 +253,7 @@
   <!-- Scripts -->
   <script src="../js/cursor.js"></script>
   <script src="../js/global.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </body>
 
 <!-- Footer -->
