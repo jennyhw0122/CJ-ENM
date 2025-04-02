@@ -236,6 +236,42 @@
   }
 }
 
+  .ux-hypothesis {
+    padding: 64px 32px;
+    margin: 0 auto;
+    max-width: 960px;
+    background-color: var(--color-bg);
+    border-left: 6px solid var(--color-kimchi); /* 강조선 */
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+
+.ux-hypothesis h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--color-text);
+  transition: color 0.3s ease;
+}
+
+.ux-hypothesis p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text-subtle);
+  max-width: 720px;
+}
+
+/* Hover 효과 */
+.ux-hypothesis:hover {
+  background-color: var(--color-bg-hover);
+}
+
+.ux-hypothesis:hover h2 {
+  color: var(--color-kimchi);
+}
+
+
 /* ===== 공통 카드 스타일 ===== */
 .insight-grid {
   display: flex;
@@ -322,5 +358,83 @@
 
   .donut-percent {
     font-size: 18px;
+  }
+}
+}
+/* 플로우차트 */
+.flow-comparison {
+  margin-top: 80px;
+}
+
+.flow-horizontal-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  overflow-x: auto;
+  padding: 16px 0;
+}
+
+.flow-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: nowrap;
+}
+
+.flow-label {
+  font-weight: 600;
+  color: var(--color-text);
+  width: 60px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.flow-track {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.flow-step {
+  padding: 8px 16px;
+  border: 1.5px solid var(--color-kimchi);
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  background-color: transparent;
+  font-size: 15px;
+  color: var(--color-text);
+}
+
+.flow-arrow {
+  font-size: 20px;
+  color: var(--color-kimchi);
+  flex-shrink: 0;
+}
+
+.flow-caption {
+  margin-top: 24px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  .flow-track {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .flow-step {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .flow-label {
+    font-size: 14px;
   }
 }
