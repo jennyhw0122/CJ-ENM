@@ -15,14 +15,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--color-text);
   transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.logo {
-  margin-right: auto;
-  color: var(--logo-color);
-  text-decoration: none;
 }
 
 .logo.no-hover::after,
@@ -60,6 +53,29 @@
   width: 100%;
 }
 
+.theme-toggle-btn {
+  background-color: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--color-hover-bg);
+}
+
+.theme-toggle-btn .icon-right {
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
 .theme-dropdown-wrapper {
   position: relative;
 }
@@ -95,13 +111,262 @@
   transition: background-color 0.2s ease;
 }
 
-.theme-dropdown li:hover {
-  background-color: #f2f2f2;
+[data-theme="dark"] .theme-dropdown li {
+  color: #eee;
+  background-color: #1a1a1a;
 }
 
 .theme-dropdown li.active {
   background-color: #640faf;
   color: white;
+}
+
+/* 공통 버튼 스타일 */
+.button {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+/* Primary */
+.button--primary {
+  background-color: var(--color-kimchi);
+  color: var(--color-text-on-kimchi);
+}
+.button--primary:hover {
+  background-color: var(--color-kimchi-hover);
+}
+.button--primary:active {
+  background-color: var(--color-kimchi-pressed);
+}
+.button--primary:disabled {
+  background-color: var(--color-disabled);
+  cursor: not-allowed;
+  color: #888;
+}
+
+/* Secondary */
+.button--secondary {
+  background-color: var(--color-secondary-bg);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+.button--secondary:hover {
+  background-color: #eee;
+}
+.button--secondary:active {
+  background-color: #ddd;
+}
+.button--secondary:disabled {
+  background-color: var(--color-disabled);
+  cursor: not-allowed;
+  color: #888;
+}
+
+/* 버튼 그룹 (2중 버튼) */
+.button-group {
+  display: inline-flex;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+.button-group .button {
+  border-radius: 0;
+  border: none;
+  margin: 0;
+}
+.button-group .button:not(:last-child) {
+  border-right: 1px solid var(--color-border);
+}
+
+/* 반응형 대응 */
+@media (max-width: 768px) {
+  .button {
+    font-size: 0.85rem;
+    padding: 8px 16px;
+  }
+}
+
+/* 플로우 섹션 전체 스타일 */
+.flowchart-component {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  background-color: var(--color-bg, #fff);
+  color: var(--color-text, #111);
+}
+
+.flowchart-single {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+
+.flowchart-pairs {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+
+.flowchart-set {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+
+.flowchart-label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-text);
+  min-width: 48px;
+}
+
+.flowchart-track {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto; 
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.flow-node {
+  padding: 10px 20px;
+  border-radius: 9999px;
+  background-color: #f2f2f2;
+  color: #222;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: 1px solid #ddd;
+  white-space: nowrap;
+}
+
+.flow-arrow {
+  color: var(--color-kimchi, #ff5a1f);
+  font-size: 1.2rem;
+}
+
+.flow-caption {
+  font-size: 0.95rem;
+  color: var(--color-gray, #666);
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+/* ------------------------
+  다크모드
+------------------------ */
+[data-theme="dark"] .flowchart-component {
+  color: #f4f4f4;
+}
+
+[data-theme="dark"] .flow-node {
+  background-color: #1d1d1d;
+  border: 1px solid #333;
+  color: #fff;
+}
+
+[data-theme="dark"] .flow-caption {
+  color: #aaa;
+}
+
+/* ------------------------
+  반응형
+------------------------ */
+@media (max-width: 768px) {
+  .flowchart-set {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .flowchart-track {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .flow-node {
+    font-size: 0.85rem;
+    padding: 8px 16px;
+  }
+
+  .flow-caption {
+    text-align: left;
+  }
+}
+
+/* 섹션 간격 */
+.insight-perspectives {
+  text-align: center;
+}
+
+/* 카드 그룹 */
+.perspective-card-group {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* 개별 카드 */
+.perspective-card {
+  flex: 1 1 280px;
+  background-color: var(--color-light-bg, #f9f9f9);
+  border: 1px solid var(--color-border, #ddd);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.perspective-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* 카드 상단 헤더 */
+.perspective-card .card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+/* 강조 텍스트 */
+.perspective-card strong {
+  color: var(--color-kimchi);
+  font-weight: 600;
+}
+
+/* 다크모드 대응 */
+[data-theme="dark"] .perspective-card {
+  background-color: #1a1a1a;
+  border-color: #333;
+}
+
+[data-theme="dark"] .perspective-card strong {
+  color: var(--color-cj-yellow);
 }
 
 /* Custom Cursor */

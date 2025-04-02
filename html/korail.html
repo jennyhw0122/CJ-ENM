@@ -23,9 +23,8 @@
           <li class="theme-dropdown-wrapper">
             <div class="theme-selector">
               <button class="theme-toggle-btn" id="theme-dropdown-btn">
-                <iconify-icon icon="ph:moon-stars-bold" class="icon icon-20 icon-left"></iconify-icon>
                 Theme
-                <iconify-icon icon="mdi:chevron-down" class="icon icon-16 icon-right icon-rotate"></iconify-icon>
+                <iconify-icon icon="mdi:arrow-top-right" class="icon icon-16 icon-right icon-rotate"></iconify-icon>
               </button>
               <ul class="theme-dropdown" id="theme-dropdown">
                 <li data-theme="light" class="active">
@@ -110,7 +109,7 @@
           사용자의 35% </strong> 는 예약 도중 떠났다. </p>
       <p class="t6"> 코레일톡 기획자의 의도는 ‘지역 기반 기차 여행 활성화’였고, 명확한 예약 플로우를 제공하고자 했다. </p>
       <p class="t6"> 하지만 실제 사용자의 행동은 이렇게 흐르고 있었다: </p>
-      <div class="user-quote t6 left "> “선택한 정보들이 초기화되어 다시 처음부터 입력해야 해서 피곤했다.” </div>
+      <div class="user-quote t6 left " style="margin: 24px;"> “선택한 정보들이 초기화되어 다시 처음부터 입력해야 해서 피곤했다.”</div>
       <div class="user-quote t6 right "> “뒤로 가면 처음으로 돌아가서 짜증 난다.” </div>
       <p class="t6"> <strong>이탈의 원인</strong>은 단계 수가 아니라, 선택 이후 흐름이 끊긴 구조에 있었다. </p>
       <p class="t6"> 사용자가 원하는 정보를 선택한 후, 다시 사라지는 경험은 감정 흐름을 단절시키고, 서비스에 대한 신뢰도에도 부정적인 영향을 끼쳤습니다. </p>
@@ -212,64 +211,65 @@
         <strong>탐색보다 확신을 먼저 제공</strong>하는 구조로, 불확실성에 의한 반복 입력을 줄였다.
       </p>
 
-    <!-- 플로우 변경 -->
-    <section class="flow-comparison section">
-      <h2 class="t3">플로우 변경 (Before → After)</h2>
-      <div class="flow-horizontal-wrapper">
-    
-        <!-- 기존 플로우 -->
-        <div class="flow-row">
-          <span class="flow-label">기존</span>
-          <div class="flow-track">
-            <div class="flow-step">메인화면</div>
+      <section class="flowchart-component section">
+        <h2 class="t3">플로우 변경 (Before → After)</h2>
+      
+        <div class="flowchart-single">
+          <div class="flowchart-label">기존</div>
+          <div class="flowchart-track">
+            <div class="flow-node">메인화면</div>
             <iconify-icon icon="mdi:arrow-right" class="flow-arrow"></iconify-icon>
-            <div class="flow-step">지역별 여행</div>
+            <div class="flow-node">지역별 여행</div>
             <iconify-icon icon="mdi:arrow-right" class="flow-arrow"></iconify-icon>
-            <div class="flow-step">상품목록</div>
+            <div class="flow-node">상품목록</div>
             <iconify-icon icon="mdi:arrow-right" class="flow-arrow"></iconify-icon>
-            <div class="flow-step">상품 상세</div>
+            <div class="flow-node">상품 상세</div>
             <iconify-icon icon="mdi:arrow-right" class="flow-arrow"></iconify-icon>
-            <div class="flow-step">날짜 선택</div>
+            <div class="flow-node">날짜 선택</div>
             <iconify-icon icon="mdi:arrow-right" class="flow-arrow"></iconify-icon>
-            <div class="flow-step">인원/열차시간</div>
+            <div class="flow-node">인원/열차시간</div>
             <iconify-icon icon="mdi:arrow-right" class="flow-arrow"></iconify-icon>
-            <div class="flow-step">패키지 선택</div>
+            <div class="flow-node">패키지 선택</div>
             <iconify-icon icon="mdi:arrow-right" class="flow-arrow"></iconify-icon>
-            <div class="flow-step">출/도착역 선택</div>
+            <div class="flow-node">출/도착역 선택</div>
             <iconify-icon icon="mdi:arrow-right" class="flow-arrow"></iconify-icon>
-            <div class="flow-step">상세 인원 선택</div>
+            <div class="flow-node">상세 인원 선택</div>
             <iconify-icon icon="mdi:arrow-right" class="flow-arrow"></iconify-icon>
-            <div class="flow-step">약관 동의</div>
+            <div class="flow-node">약관 동의</div>
             <iconify-icon icon="mdi:arrow-right" class="flow-arrow"></iconify-icon>
-            <div class="flow-step">예약 정보</div>
+            <div class="flow-node">예약 정보</div>
           </div>
         </div>
-    
-        <!-- 개선 후 플로우 -->
-        <div class="flow-row">
-          <span class="flow-label">개선</span>
-          <div class="flow-track">
-            <div class="flow-step">메인화면</div>
+      
+        <div class="flowchart-single">
+          <div class="flowchart-label">개선</div>
+          <div class="flowchart-track">
+            <div class="flow-node">메인화면</div>
             <iconify-icon icon="mdi:arrow-right" class="flow-arrow"></iconify-icon>
-            <div class="flow-step">지역별 여행</div>
+            <div class="flow-node">지역별 여행</div>
             <iconify-icon icon="mdi:arrow-right" class="flow-arrow"></iconify-icon>
-            <div class="flow-step">상품목록</div>
+            <div class="flow-node">상품목록</div>
             <iconify-icon icon="mdi:arrow-right" class="flow-arrow"></iconify-icon>
-            <div class="flow-step">상품 상세</div>
+            <div class="flow-node">상품 상세</div>
             <iconify-icon icon="mdi:arrow-right" class="flow-arrow"></iconify-icon>
-            <div class="flow-step">날짜 선택</div>
+            <div class="flow-node">날짜 선택</div>
             <iconify-icon icon="mdi:arrow-right" class="flow-arrow"></iconify-icon>
-            <div class="flow-step">출발·도착역 + 인원 선택</div>
+            <div class="flow-node">출발·도착역 + 인원 선택</div>
             <iconify-icon icon="mdi:arrow-right" class="flow-arrow"></iconify-icon>
-            <div class="flow-step">상품/패키지 선택</div>
+            <div class="flow-node">상품/패키지 선택</div>
             <iconify-icon icon="mdi:arrow-right" class="flow-arrow"></iconify-icon>
-            <div class="flow-step">약관 동의</div>
+            <div class="flow-node">약관 동의</div>
             <iconify-icon icon="mdi:arrow-right" class="flow-arrow"></iconify-icon>
-            <div class="flow-step">예약 완료</div>
+            <div class="flow-node">예약 완료</div>
           </div>
         </div>
-      </div>
-    
+      
+        <p class="t6 flow-caption">
+          <iconify-icon icon="mdi:lightbulb-on-outline" class="icon icon-18 icon-left"></iconify-icon>
+          단계 수가 줄어든 것이 아니라, <strong>감정 흐름이 끊기지 않도록 재배열한 것</strong>
+        </p>
+      </section>
+
       <section class="results section">
         <h2 class="t3">실험 결과 | 구조 설계로 행동이 바뀌었다</h2>
       
@@ -329,25 +329,52 @@
           <tr><td class="t6">행사 등록 시스템</td><td class="t6">정보 확인 및 수정 구조 → 반복 입력 최소화</td></tr>
         </tbody>
       </table>
-      <p class="t6">→ 핵심은 <strong>사용자 불안 요소를 미리 감지하고, 수정 가능성과 정보 유지로 감정을 안정화시키는 구조 설계</strong>임</p>
+      <p class="t6">→ 핵심은 <strong>사용자 불안 요소를 미리 감지하고, 수정 가능성과 정보 유지로 감정을 안정화시키는 구조 설계</strong></p>
     </section>
 
-    <!-- 구조 설계의 실무적 가치 -->
-    <section class="insights section">
-      <h2 class="t3">구조 설계의 실무적 가치 요약</h2>
-      <p class="t5"><strong>“사용자의 선택이 확신으로 바뀌는 그 순간을 설계한 구조 중심 UX 개선 사례입니다.”</strong></p>
-      <p class="t6">뒤로 가기 평균 3.07회 → 2.00회, 예약 완료율 +7.18%p 상승이라는 정량적 변화로 설계 효과를 입증했습니다.</p>
-      <h3 class="t5">실무적 인사이트로 확장</h3>
-      <table>
-        <thead>
-          <tr><th class="t6">관점</th><th class="t6">적용 포인트</th></tr>
-        </thead>
-        <tbody>
-          <tr><td class="t6">기획자 관점</td><td class="t6">단계를 줄이는 것이 아니라, 정보의 등장 순서와 확인 구조를 재배열하여 감정 흐름을 설계.</td></tr>
-          <tr><td class="t6">디자이너 관점</td><td class="t6">선택값 유지 → 심리적 피로 해소 → 반복 입력 제거까지 연결되는 구조 설계의 흐름을 스스로 설계하고 실험함. 기능 추가가 아닌 기존 플로우의 구조 리디자인이었기에 디자인 역량의 핵심.</td></tr>
-          <tr><td class="t6">개발자 관점</td><td class="t6">선택값 유지 로직은 별도 기능 추가가 아니라 기존 상태 관리 구조를 활용해 효율적으로 구현 가능. 유지보수 측면에서도 일관된 UX 제공이 용이.</td></tr>
-        </tbody>
-      </table>
+    <section class="insight-perspectives section">
+      <h2 class="t3">확신의 순간을 설계하다 – 구조 중심 UX로 사용자의 행동을 바꾸다</h2>
+      <p class="t6">
+        뒤로 가기 평균 3.07회 → 2.00회, 예약 완료율 +7.18%p 상승이라는 정량적 변화로 설계 효과
+      </p>
+    
+      <h3 class="t5">하나의 구조, 세 가지 관점</h3>
+    
+      <div class="perspective-card-group">
+        <!-- 기획자 -->
+        <div class="perspective-card">
+          <div class="card-header">
+            <iconify-icon icon="ph:strategy-bold" class="icon icon-20"></iconify-icon>
+            <span>기획자 관점</span>
+          </div>
+          <p class="t6">
+            단계를 줄이는 것이 아니라, <strong>정보의 등장 순서와 확인 구조를 재배열</strong>하여 감정 흐름을 설계.
+          </p>
+        </div>
+    
+        <!-- 디자이너 -->
+        <div class="perspective-card">
+          <div class="card-header">
+            <iconify-icon icon="ph:pen-nib-bold" class="icon icon-20"></iconify-icon>
+            <span>디자이너 관점</span>
+          </div>
+          <p class="t6">
+            선택값 유지 → 심리적 피로 해소 → 반복 입력 제거까지 연결되는 구조 설계 흐름을 <strong>스스로 설계하고 실험</strong>함.
+            기능 추가가 아닌 <strong>플로우 구조 리디자인</strong>이 핵심.
+          </p>
+        </div>
+    
+        <!-- 개발자 -->
+        <div class="perspective-card">
+          <div class="card-header">
+            <iconify-icon icon="ph:code-bold" class="icon icon-20"></iconify-icon>
+            <span>개발자 관점</span>
+          </div>
+          <p class="t6">
+            선택값 유지 로직은 별도 기능 추가 없이 <strong>기존 상태 관리 구조를 활용</strong>하여 효율적 구현. 유지보수 관점에서도 <strong>일관된 UX 제공</strong>에 용이.
+          </p>
+        </div>
+      </div>
     </section>
   </main> 
 
@@ -372,9 +399,9 @@
 </body>
 
 <!-- Footer -->
-<footer class="footer">
+<footer class="footer" style="margin-top: 100px;">
   <div class="footer-container">
-    © 2025 JIWON HWANG · Portfolio
+    <!-- 나중에 내용 추가 예정 -->
   </div>
 </footer>
 </html>

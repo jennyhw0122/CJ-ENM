@@ -8,8 +8,8 @@ body {
 }
 
 .section {
-  padding: 96px 32px;
-  max-width: 1200px;
+  padding: 40px 60px;
+  max-width: 1600px;
   margin: 0 auto;
 }
 @media (max-width: 768px) {
@@ -38,11 +38,11 @@ body {
 }
 
 /* --------------------
-   1. Intro Section
+  1. Intro Section
 -------------------- */
 .intro {
   position: relative;
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -110,7 +110,7 @@ body {
 
 
 /* ----------------------------
-   Summary Cards
+  Summary Cards
 ----------------------------- */
 .summary-grid {
   display: flex;
@@ -150,21 +150,19 @@ body {
 }
 
 /* ----------------------------
-   Problem Definition
+  Problem Definition
 ----------------------------- */
 .problem-definition p {
   margin-bottom: 1.25rem;
 }
+
 .user-quote {
   max-width: 680px;
   margin: 1.5rem auto;
   padding: 20px 24px;
   border-radius: 16px;
   background-color: var(--color-light-bg);
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.6;
-  color: var(--color-text);
+  color: var(--color-light-bg);
   position: relative;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
@@ -175,20 +173,24 @@ body {
   position: absolute;
   left: 28px;
   bottom: -10px;
-  border-width: 10px 10px 0;
-  border-style: solid;
+  width: 14px;
+  height: 14px;
   border-color: var(--color-light-bg) transparent transparent transparent;
+  transform: rotate(45deg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 /* 꼬리 (오른쪽) */
 .user-quote.right::after {
   content: '';
   position: absolute;
-  right: 28px;
+  right: 36px;
   bottom: -10px;
-  border-width: 10px 10px 0;
-  border-style: solid;
-  border-color: var(--color-light-bg) transparent transparent transparent;
+  width: 14px;
+  height: 14px;
+  background-color: var(--color-light-bg)  transparent transparent transparent;
+  transform: rotate(45deg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 .ux-breakdown-flow {
@@ -210,7 +212,7 @@ body {
 
 
 /* ----------------------------
-   User Insight / Charts
+  User Insight / Charts
 ----------------------------- */
 .insight-grid {
   display: flex;
@@ -269,42 +271,6 @@ body {
   font-weight: bold;
   color: var(--color-kimchi);
 }
-
-/* ----------------------------
-   플로우 비교
------------------------------ */
-.flow-horizontal-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-.flow-row {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-.flow-label {
-  font-weight: 700;
-  min-width: 50px;
-}
-.flow-track {
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-}
-.flow-step {
-  padding: 8px 16px;
-  background-color: var(--color-light-bg);
-  border: 1px solid #ddd;
-  border-radius: 9999px;
-  font-size: 0.9rem;
-}
-.flow-arrow {
-  color: #999;
-  font-size: 1rem;
-}
-
-
 
 /* 결과 그래프 전체 컨테이너 */
 .metric-graph-container {
