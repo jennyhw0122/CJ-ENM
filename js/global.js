@@ -61,6 +61,38 @@ document.addEventListener("click", (e) => {
   }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const allItems = document.querySelectorAll(".comparison-card-item");
+  const wrapper = document.querySelector(".comparison-card-wrapper");
+  const groupCount = allItems.length / 2;
+  let currentIndex = 0;
+
+  // 처음에 모든 카드 숨김 처리
+  function hideAll() {
+    allItems.forEach(item => {
+      item.style.display = "none";
+    });
+  }
+
+  function showPair(index) {
+    hideAll();
+
+    const before = allItems[index * 2];
+    const after = allItems[index * 2 + 1];
+
+    if (before) before.style.display = "block";
+    if (after) after.style.display = "block";
+  }
+
+  showPair(currentIndex);
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % groupCount;
+    showPair(currentIndex);
+  }, 8000);
+});
+
+
 // ------------------------------
 // 도넛 애니메이션
 // ------------------------------

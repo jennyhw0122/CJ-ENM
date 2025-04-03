@@ -55,6 +55,7 @@
         <iconify-icon icon="mdi:chevron-down" class="icon icon-24"></iconify-icon>
       </div>
     </section>
+    
     <section id="projects" class="project-summary section">
       <div class="summary-grid">
         <!-- 역할 카드 -->
@@ -105,9 +106,8 @@
       <p class="t6">
         여행을 계획하는 순간은 설레야 하지만, 
         <strong class="highlight-percentage">
-          <iconify-icon icon="mdi:account-remove-outline" class="icon icon-18 icon-left"></iconify-icon>
           사용자의 35% </strong> 는 예약 도중 떠났다. </p>
-      <p class="t6"> 코레일톡 기획자의 의도는 ‘지역 기반 기차 여행 활성화’였고, 명확한 예약 플로우를 제공하고자 했다. </p>
+      <p class="t6"> 코레일톡 기획자의 의도는 <strong>‘지역 기반 기차 여행 활성화’</strong>였고, 명확한 예약 플로우를 제공하고자 했다. </p>
       <p class="t6"> 하지만 실제 사용자의 행동은 이렇게 흐르고 있었다: </p>
       <div class="user-quote t6 left " style="margin: 24px;"> “선택한 정보들이 초기화되어 다시 처음부터 입력해야 해서 피곤했다.”</div>
       <div class="user-quote t6 right "> “뒤로 가면 처음으로 돌아가서 짜증 난다.” </div>
@@ -133,7 +133,7 @@
   <div class="insight-grid">
     <!-- 도넛 -->
     <div class="insight-card">
-      <h3 class="t6 card-title">복잡한 예약 구조</h3>
+      <h3 class="t4 card-title">복잡한 예약 구조</h3>
       <div class="donut-container" data-value="43.6">
         <svg viewBox="0 0 36 36" class="donut-chart">
           <circle class="donut-bg" cx="18" cy="18" r="15.915"></circle>
@@ -143,76 +143,95 @@
           <span class="donut-percent">0%</span>
         </div>
       </div>
-      <p class="t7 text-center">
+      <p class="t6 text-center">
         리뷰 중 "복잡한 예약 구조"가 <strong class="highlight-orange">43.6%</strong> 차지
       </p>
     </div>
     <!-- 정량 설문 -->
     <div class="insight-card">
-      <h3 class="t6 card-title">정량 설문 결과</h3>
+      <h3 class="t4 card-title">정량 설문 결과</h3>
       <div class="score-card">
-        <p class="t7">예약 화면 직관성</p>
+        <p class="t6">예약 화면 직관성</p>
         <span class="score" data-score="2.47">0.00</span>
       </div>
       <div class="score-card">
-        <p class="t7">예약 단계 과다</p>
+        <p class="t6">예약 단계 과다</p>
         <span class="score" data-score="2.53">0.00</span>
       </div>
       <div class="score-card">
-        <p class="t7">정보 접근성</p>
+        <p class="t6">정보 접근성</p>
         <span class="score" data-score="2.50">0.00</span>
       </div>
     </div>
   </div>
       <p class="t6">
         <iconify-icon icon="mdi:arrow-right-bold" class="icon icon-16 icon-left"></iconify-icon>
-        특히 <strong>정보 접근성과 직관성이 낮았던 사용자일수록, 재사용 의향도 낮았음.</strong>
+        특히 <strong>정보 접근성과 직관성이 낮았던 사용자일수록, 재사용 의향도 낮았음</strong>
       </p>
       <p class="t6">
         <iconify-icon icon="mdi:arrow-right-bold" class="icon icon-16 icon-left"></iconify-icon>
-        ‘한 번 써봤는데 복잡해서 다시 쓰고 싶지 않다’는 흐름이 드러남.
+        ‘한 번 써봤는데 복잡해서 다시 쓰고 싶지 않다’는 흐름이 드러남
       </p>
     </section>
 
     <!-- UX 가설 -->
     <section class="ux-hypothesis section">
-      <h2 class="t3">UX 가설 | 사용자가 고른 정보가 이어질수록, 예약은 끊기지 않는다.</h2>
+      <h2 class="t3">UX 가설 | 사용자가 고른 정보가 이어질수록, 예약은 끊기지 않는다</h2>
       <p class="t6">출발역과 인원을 한 번에 선택하고, 선택한 정보가 흐름 속에서 유지된다면, 사용자는 반복 선택 없이 예약을 마무리할 수 있을 것이다.</p>
     </section>
 
     <!-- Before/After -->
-    <section class="structure-change section">
-      <h2 class="t3">Before/After 구조 변화</h2>
+    <section class="comparison-card section">
+      <h2 class="t3">UI 개선 비교</h2>
+      <p class="t6 subtitle">Before에서 After로, 구조 중심 개선을 시각화</p>
     
-      <!-- 1. Before/After 테이블 -->
-      <table>
-        <thead>
-          <tr><th class="t6">항목</th><th class="t6">기존 UI</th><th class="t6">개선 UI</th></tr>
-        </thead>
-        <tbody>
-          <tr><td class="t6">인원 선택 위치</td><td class="t6">상품 선택 이후</td><td class="t6">출발역과 통합 배치</td></tr>
-          <tr><td class="t6">선택값 유지</td><td class="t6">초기화됨</td><td class="t6">유지됨</td></tr>
-        </tbody>
-      </table>
+      <div class="comparison-card-wrapper">
     
-      <!-- 2. Before/After 이미지 비교 -->
-      <div class="ui-compare-wrapper" style="margin-top: 2.5rem;">
-        <div class="ui-compare-item" data-aos="fade-up">
-          <h4 class="t6">기존 UI</h4>
-          <img src="../images/before-ui.png" alt="기존 UI 예시" class="ui-image" loading="lazy" />
+        <!-- 카드 1 -->
+        <div class="comparison-card-item">
+          <span class="badge">Before</span>
+          <img src="../images/before-ui-calendar.png" alt="기존 UI 1" />
+          <p class="caption">달력 하단에 안내 및 여백이 과하게 차지</p>
         </div>
-        <div class="ui-compare-item" data-aos="fade-up" data-aos-delay="100">
-          <h4 class="t6">개선 UI</h4>
-          <img src="../images/after-ui.png" alt="개선 UI 예시" class="ui-image" loading="lazy" />
+        <div class="comparison-card-item">
+          <span class="badge after">After</span>
+          <img src="../images/after-ui-calendar.png" alt="개선 UI 1" />
+          <p class="caption">달력 중심으로 탐색 → 직관적 선택 경험 제공</p>
         </div>
+    
+        <!-- 카드 2 -->
+        <div class="comparison-card-item">
+          <span class="badge">Before</span>
+          <img src="../images/before-ui-person.png" alt="기존 UI 2" />
+          <p class="caption">인원 선택이 상품 이후로 나와 혼란</p>
+        </div>
+        <div class="comparison-card-item">
+          <span class="badge after">After</span>
+          <img src="../images/after-ui-person.png" alt="개선 UI 2" />
+          <p class="caption">출발역과 인원 통합 배치 → 흐름 명확</p>
+        </div>
+    
+        <!-- 카드 3 -->
+        <div class="comparison-card-item">
+          <span class="badge">Before</span>
+          <img src="../images/before-ui-review.png" alt="기존 UI 3" />
+          <p class="caption">상품 정보 확인 중 반복 입력 발생</p>
+        </div>
+        <div class="comparison-card-item">
+          <span class="badge after">After</span>
+          <img src="../images/after-ui-review.png" alt="개선 UI 3" />
+          <p class="caption">선택 정보가 유지되며, 탐색 효율성 향상</p>
+        </div>
+        <p class="t6 comparison-caption">
+          <iconify-icon icon="mdi:arrow-right-bold-circle" class="icon icon-16 icon-left"></iconify-icon>
+          <strong>탐색보다 확신을 먼저 제공</strong>하는 구조로, 반복 입력을 줄였다.
+        </p>
       </div>
-      <p class="t6">
-        <iconify-icon icon="mdi:arrow-right-bold-circle" class="icon icon-16 icon-left"></iconify-icon>
-        <strong>탐색보다 확신을 먼저 제공</strong>하는 구조로, 불확실성에 의한 반복 입력을 줄였다.
-      </p>
+    </section>
 
+    <!-- 플로우 변경-->
       <section class="flowchart-component section">
-        <h2 class="t3">플로우 변경 (Before → After)</h2>
+        <h2 class="t3">플로우 변경</h2>
       
         <div class="flowchart-single">
           <div class="flowchart-label">기존</div>
@@ -317,19 +336,41 @@
       </section>
 
     <!-- 전략적 확장 가능성 -->
-    <section class="expansion section">
+    <section class="animated-timeline section">
       <h2 class="t3">전략적 확장 가능성</h2>
-      <table>
-        <thead>
-          <tr><th class="t6">적용 플랫폼</th><th class="t6">기대 효과</th></tr>
-        </thead>
-        <tbody>
-          <tr><td class="t6">티켓팅 플랫폼</td><td class="t6">좌석·일자·인원 선택 통합 → 흐름 최적화</td></tr>
-          <tr><td class="t6">숙박 예약 플랫폼</td><td class="t6">옵션 선택 단계를 구조화하여 이탈 방지</td></tr>
-          <tr><td class="t6">행사 등록 시스템</td><td class="t6">정보 확인 및 수정 구조 → 반복 입력 최소화</td></tr>
-        </tbody>
-      </table>
-      <p class="t6">→ 핵심은 <strong>사용자 불안 요소를 미리 감지하고, 수정 가능성과 정보 유지로 감정을 안정화시키는 구조 설계</strong></p>
+      <div class="timeline-list">
+        <div class="timeline-item fade-in">
+          <div class="timeline-line">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <h3 class="t6"><strong>티켓팅 플랫폼</strong></h3>
+            <p class="t7">좌석 · 일자 · 인원 선택 통합 → 흐름 최적화</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-in">
+          <div class="timeline-line">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <h3 class="t6"><strong>숙박 예약 플랫폼</strong></h3>
+            <p class="t7">옵션 선택 단계를 구조화하여 이탈 방지</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-in">
+          <div class="timeline-line">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <h3 class="t6"><strong>행사 등록 시스템</strong></h3>
+            <p class="t7">정보 확인 및 수정 구조 → 반복 입력 최소화</p>
+          </div>
+        </div>
+      </div>
+      <p class="t6 timeline-insight">
+        <iconify-icon icon="mdi:lightbulb-outline" class="icon icon-18 icon-left"></iconify-icon>
+        핵심은 <strong>사용자 불안 요소를 감지하고, 수정 가능성과 정보 유지로 감정을 안정화</strong>시키는 구조 설계
+      </p>
     </section>
 
     <section class="insight-perspectives section">
@@ -380,7 +421,7 @@
 
 <!-- 뒤로가기 버튼 -->
 <section class="back-button-section">
-  <button class="button button--secondary" onclick="history.back()">
+  <button class="button button--secondary" onclick="history.back()" style="margin: 0 40px;">
     <iconify-icon icon="mdi:arrow-left" class="icon icon-20 icon-left"></iconify-icon>
     이전 페이지로 돌아가기
   </button>

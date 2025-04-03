@@ -2,12 +2,13 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <title>YES24</title>
+  <title>YES24 디자인 시스템 구축 및 개선</title>
   <link rel="stylesheet" href="../css/common.css" />
   <link rel="stylesheet" href="../css/component.css" />
-  <link rel="stylesheet" href="/css/index.css" />
+  <link rel="stylesheet" href="../css/yes24.css" />
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -45,7 +46,6 @@
   
   <main class="container">
     <section class="section">
-      <h1 class="t2">YES24 디자인 시스템 구축 및 개선</h1>
       <p class="t5 highlight-text">
         통합된 기준 없이 개별 최적화만 반복된 결과,<br>
         브랜드 간 UI 불일치와 유지보수 비효율이 누적되었습니다.
@@ -168,25 +168,23 @@
       </p>
     </section>
   </main>
-  
-  <section class="back-button-section">
-    <button class="back-button t6" onclick="history.back()">
-      <span class="material-icons">arrow_back</span>
-      이전 페이지로 돌아가기
-    </button>
-  </section>
-  <section class="scroll-top-section">
-    <button class="scroll-top-button" id="scrollTopButton" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
-      <i class="material-icons">arrow_upward</i>
-    </button>
-  </section>
+
+  <!-- 뒤로가기 버튼 -->
+<section class="back-button-section">
+  <button class="button button--secondary" onclick="history.back()" style="margin: 0 40px;">
+    <iconify-icon icon="mdi:arrow-left" class="icon icon-20 icon-left"></iconify-icon>
+    이전 페이지로 돌아가기
+  </button>
+</section>
+
+<!-- 스크롤 탑 버튼 -->
+<section class="scroll-top-section">
+  <button class="scroll-top-button" id="scrollTopButton" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+    <iconify-icon icon="mdi:arrow-up" class="icon icon-20"></iconify-icon>
+  </button>
+</section>
 
   
-  <!-- 커스텀 커서 -->
-  <div class="custom-cursor">
-    <span class="cursor-text">See Project</span>
-  </div>
-
   <!-- Scripts -->
   <script src="../js/cursor.js"></script>
   <script src="../js/global.js"></script>

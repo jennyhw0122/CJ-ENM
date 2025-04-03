@@ -121,6 +121,47 @@
   color: white;
 }
 
+/* ----------------------------
+  Summary Cards
+----------------------------- */
+.summary-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: space-between;
+}
+.summary-card {
+  flex: 1 1 calc(25% - 24px);
+  min-width: 220px;
+  background-color: var(--color-light-bg);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  border: 1px solid #ddd;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+.summary-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+}
+.icon-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.vertical-bar {
+  width: 4px;
+  height: 40px;
+  background-color: var(--color-kimchi);
+  margin-right: 12px;
+  border-radius: 2px;
+}
+.card-icon {
+  font-size: 24px;
+  color: var(--color-kimchi);
+}
+
+
 /* 공통 버튼 스타일 */
 .button {
   font-family: inherit;
@@ -216,19 +257,20 @@
 
 .flowchart-pairs {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 2rem;
   width: 100%;
-  max-width: 1000px;
 }
 
 
 .flowchart-set {
+  flex: 1 1 48%; 
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: flex-start;
+  flex-direction: row; 
 }
 
 
@@ -261,6 +303,11 @@
 .flow-arrow {
   color: var(--color-kimchi, #ff5a1f);
   font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;      
+  justify-content: center;
+  line-height: 1;           
+  margin-inline: 4px;
 }
 
 .flow-caption {
@@ -311,11 +358,6 @@
   }
 }
 
-/* 섹션 간격 */
-.insight-perspectives {
-  text-align: center;
-}
-
 /* 카드 그룹 */
 .perspective-card-group {
   display: flex;
@@ -355,7 +397,6 @@
 
 /* 강조 텍스트 */
 .perspective-card strong {
-  color: var(--color-kimchi);
   font-weight: 600;
 }
 
@@ -399,4 +440,25 @@
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ----------------------------
+  Scroll Top Button
+----------------------------- */
+.scroll-top-button {
+  background-color: var(--color-kimchi);
+  color: white;
+  padding: 16px;
+  border-radius: 50%;
+  border: none;
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  cursor: pointer;
+  z-index: 99;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+.scroll-top-button:hover {
+  transform: scale(1.1);
 }

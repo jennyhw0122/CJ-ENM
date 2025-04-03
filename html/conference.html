@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="../css/component.css" />
   <link rel="stylesheet" href="../css/conference.css" />
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -42,30 +43,64 @@
     </div>
   </header>
 
-<main class="container">
-  <h1 class="t2">대규모 IT 컨퍼런스 UX 설계: SYNXCON 2025</h1>
-
-  <!-- 01. 프로젝트 개요 -->
-  <section>
-    <h2 class="t3">01. 프로젝트 개요</h2>
-    <div class="info-cards t7">
-      <div class="card"><strong>프로젝트명</strong><span>SYNXCON 2025 웹 플랫폼 UX 설계 및 구축</span></div>
-      <div class="card"><strong>기간</strong><span>2025.02.24 – 2025.04.02 (총 6주)</span></div>
-      <div class="card"><strong>참여 인원</strong><span>기획 1, 디자이너 2, 프론트엔드 2, 백엔드 4 (총 9명)</span></div>
-      <div class="card"><strong>담당 역할</strong>
-        <span>
-          UX 전략 수립 및 사용자 플로우 정의<br>
-          디자인 시스템 설계 및 컴포넌트 개발<br>
-          프로토타입 제작 및 개발 커뮤니케이션<br>
-          UT 및 AI 기반 UX 분석 주도
-        </span>
+  <main class="ux-case-study">
+    <section class="intro text-center">
+      <p class="t2">
+        컨퍼런스를 마친 순간, 연결은 시작되어야 한다.<br />
+        그런데 왜, 참가자의 <span class="highlight">48.7%</span>는 그 인사이트를 어디에도 남기지 못했을까요?
+      </p>
+      <iconify-icon icon="solar:diamond-bold" class="divider-icon"></iconify-icon>
+      <div class="scroll-down" onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });">
+        <iconify-icon icon="mdi:chevron-down" class="icon icon-24"></iconify-icon>
       </div>
-    </div>
+    </section>
 
-    <p class="t5 highlight-text">
-      ‘기록의 단절’과 ‘네트워킹 부족’이라는 구조적 UX 문제를 해결하기 위한 프로젝트
-    </p>
-  </section>
+    <section id="project-overview" class="project-summary section">
+      <h2 class="t3">01. 프로젝트 개요</h2>
+      <div class="summary-grid">
+        <!-- 역할 -->
+        <div class="summary-card">
+          <div class="icon-bar">
+            <span class="vertical-bar"></span>
+            <iconify-icon icon="ph:user-bold" class="card-icon"></iconify-icon>
+          </div>
+          <h3 class="t4">역할</h3>
+          <p class="t6">UX 전략 수립, 시스템 설계, 프로토타입, 분석 주도</p>
+        </div>
+        <!-- 기간 -->
+        <div class="summary-card">
+          <div class="icon-bar">
+            <span class="vertical-bar"></span>
+            <iconify-icon icon="ph:calendar-check-bold" class="card-icon"></iconify-icon>
+          </div>
+          <h3 class="t4">기간</h3>
+          <p class="t6">2025.02.24 – 2025.04.02 (총 6주)</p>
+        </div>
+        <!-- 팀 구성 -->
+        <div class="summary-card">
+          <div class="icon-bar">
+            <span class="vertical-bar"></span>
+            <iconify-icon icon="ph:users-bold" class="card-icon"></iconify-icon>
+          </div>
+          <h3 class="t4">팀 구성</h3>
+          <p class="t6">기획 1 · 디자이너 2 · 프론트엔드 2 · 백엔드 4 (총 9명)</p>
+        </div>
+        <!-- 담당 역할 -->
+        <div class="summary-card">
+          <div class="icon-bar">
+            <span class="vertical-bar"></span>
+            <iconify-icon icon="ph:note-pencil-bold" class="card-icon"></iconify-icon>
+          </div>
+          <h3 class="t4">담당 역할</h3>
+          <p class="t6">
+            사용자 플로우 정의 및 UX 전략 수립<br>
+            디자인 시스템 및 컴포넌트 설계<br>
+            프로토타입 제작 및 개발 협업<br>
+            UT 설계 및 AI 기반 UX 분석
+          </p>
+        </div>
+      </div>
+    </section>
 
   <!-- 02. 문제 정의 -->
   <section>
@@ -152,6 +187,14 @@
     <p class="t6">
       인터뷰 어려움을 AI 기반 페르소나로 대체 → 10명 페르소나 설계 및 시나리오 UX 인터뷰 진행
     </p>
+    <div class="summary-box t6">
+      <iconify-icon icon="mdi:check-decagram" class="icon icon-18 icon-left"></iconify-icon>
+      <strong>최종 UT 일치율</strong>: 
+      <strong class="highlight-score">
+        <span class="count-up" data-target="81.25">0</span>%
+      </strong><br/>
+      두 UT 간 <strong>UX 개선 인식의 일관성</strong>이 매우 높아, 개선 방향의 신뢰도를 확보할 수 있었습니다.
+    </div>
     <table class="table-grid t7">
       <thead>
         <tr><th>UX 클러스터</th><th>응답 수</th><th>도출 인사이트</th></tr>
@@ -195,14 +238,24 @@
   </section>
 </main>
 
-  <!-- 커스텀 커서 -->
-  <div class="custom-cursor">
-    <span class="cursor-text">See Project</span>
-  </div>
+<!-- 뒤로가기 버튼 -->
+<section class="back-button-section">
+  <button class="button button--secondary" onclick="history.back()" style="margin: 0 40px;">
+    <iconify-icon icon="mdi:arrow-left" class="icon icon-20 icon-left"></iconify-icon>
+    이전 페이지로 돌아가기
+  </button>
+</section>
+
+<!-- 스크롤 탑 버튼 -->
+<section class="scroll-top-section">
+  <button class="scroll-top-button" id="scrollTopButton" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+    <iconify-icon icon="mdi:arrow-up" class="icon icon-20"></iconify-icon>
+  </button>
+</section>
 
   <!-- Scripts -->
   <script src="../js/cursor.js"></script>
-  <script src="../js/global.js"></script>
+  <script src="../js/global.js"></script> 
 </body>
 
 <!-- Footer -->

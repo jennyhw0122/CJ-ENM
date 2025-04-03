@@ -52,9 +52,41 @@
 html, body {
   font-family: 'CJ ONLYONE NEW body', 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: var(--color-bg);
+  color: var(--color-text);
   margin: 0;
   padding: 0;
   width: 100%;
+}
+
+.section {
+  padding: 40px 60px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 64px 20px;
+  }
+}
+
+.iconify-icon.icon {
+  vertical-align: middle;
+  font-size: 18px;
+  color: var(--color-text);
+}
+
+.highlight {
+  color: var(--color-kimchi);
+  font-weight: 700;
+}
+
+.highlight-percentage {
+  color: var(--color-kimchi);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }
 
 a {

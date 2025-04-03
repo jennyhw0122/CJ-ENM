@@ -1,0 +1,68 @@
+/* === 프로젝트 리스트 전체 === */
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+/* === 각 프로젝트 구분 블록 === */
+.project-divider {
+  padding: 2rem 2rem;
+  background-color: var(--color-light-bg, #f9f9f9);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-divider:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.project-divider a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* === 텍스트 스타일 === */
+.project-divider .t4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.project-divider .t7 {
+  font-size: 1rem;
+  color: var(--color-gray, #666);
+}
+
+/* === 다크모드 대응 === */
+[data-theme="dark"] .project-divider {
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.03);
+}
+
+[data-theme="dark"] .project-divider .t7 {
+  color: #aaa;
+}
+
+/* === 반응형 === */
+@media (max-width: 768px) {
+  .project-divider {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .project-divider .t4 {
+    font-size: 1.1rem;
+  }
+
+  .project-divider .t7 {
+    font-size: 0.95rem;
+  }
+}
