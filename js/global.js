@@ -121,6 +121,25 @@ function animateDonut(container) {
   }, 20);
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".count-up");
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute("data-target");
+      const count = +counter.innerText;
+      const increment = target / 80;
+
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        requestAnimationFrame(updateCount);
+      } else {
+        counter.innerText = target + "%";
+      }
+    };
+    updateCount();
+  });
+});
+
 // ------------------------------
 // 정량 점수 애니메이션
 // ------------------------------

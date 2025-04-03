@@ -1,3 +1,4 @@
+
 /* --------------------
   1. Intro Section
 -------------------- */
@@ -67,4 +68,215 @@
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(10px); }
+}
+
+/* 기본 스타일 (라이트 모드 기준) */
+.emotion-metric-cards {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.metric-card {
+  background-color: var(--color-light-bg);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 240px;
+}
+
+.metric-icon {
+  font-size: 32px;
+  color: var(--color-primary);
+}
+
+[data-theme="dark"] .metric-card {
+  background-color: rgba(255,255,255,0.06);
+}
+
+/* ===========================
+   SECTION 공통 구조
+=========================== */
+.section {
+  padding: 96px 48px;
+  max-width: 1240px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* ===========================
+   UX FLOW LINE
+=========================== */
+.flow-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.flow-node {
+  background: var(--color-accent-bg);
+  padding: 12px 20px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ===========================
+   TABLE 스타일
+=========================== */
+.table-grid {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 24px;
+}
+.table-grid th,
+.table-grid td {
+  padding: 12px 16px;
+  border: 1px solid var(--color-border);
+  text-align: left;
+}
+.table-grid thead {
+  background-color: var(--color-light-bg);
+  font-weight: bold;
+}
+
+/* ===========================
+   BULLET LIST
+=========================== */
+.bullet-list {
+  padding-left: 20px;
+  list-style: disc;
+  margin-bottom: 32px;
+}
+.bullet-list li {
+  margin-bottom: 10px;
+}
+
+/* ===========================
+   METRIC 카드 (지표 카드)
+=========================== */
+.emotion-metric-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.metric-card {
+  background-color: var(--color-light-bg);
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  flex: 1 1 220px;
+}
+.metric-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.metric-text strong {
+  font-size: 28px;
+  color: var(--color-accent);
+}
+.metric-text p {
+  font-size: 14px;
+  color: var(--color-text-light);
+}
+
+/* ===========================
+   NOTE BOX
+=========================== */
+.note-box {
+  margin-top: 32px;
+  background-color: var(--color-accent-bg);
+  padding: 20px 24px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ===========================
+   사용자 말풍선
+=========================== */
+.user-quote {
+  max-width: 680px;
+  margin: 1.5rem auto;
+  padding: 20px 24px;
+  border-radius: 16px;
+  background-color: var(--color-light-bg);
+  color: var(--color-text);
+  position: relative;
+  box-shadow: var(--shadow-sm);
+  font-size: 15px;
+}
+.user-quote.left::after {
+  content: '';
+  position: absolute;
+  left: 28px;
+  bottom: -10px;
+  width: 14px;
+  height: 14px;
+  background-color: var(--color-light-bg);
+  transform: rotate(45deg);
+  box-shadow: var(--shadow-xs);
+}
+
+/* ===========================
+   CHART 스타일 (도넛 차트 캔버스)
+=========================== */
+.donut-chart-wrapper {
+  max-width: 360px;
+  margin: 0 auto 40px;
+}
+canvas#donutChart {
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* ===========================
+   카운트업 숫자 (애니메이션용)
+=========================== */
+.count-up {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+/* ===========================
+   반응형 대응
+=========================== */
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 64px 24px;
+  }
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+  .flow-line {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ===========================
+   다크모드
+=========================== */
+[data-theme="dark"] .summary-card,
+[data-theme="dark"] .metric-card,
+[data-theme="dark"] .user-quote,
+[data-theme="dark"] .note-box {
+  background-color: rgba(255, 255, 255, 0.06);
+  color: var(--color-white);
+}
+[data-theme="dark"] .user-quote.left::after {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+[data-theme="dark"] .table-grid th,
+[data-theme="dark"] .table-grid td {
+  border-color: rgba(255, 255, 255, 0.15);
 }

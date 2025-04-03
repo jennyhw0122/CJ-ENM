@@ -89,67 +89,6 @@
 }
 
 
-/* ----------------------------
-  Problem Definition
------------------------------ */
-.problem-definition p {
-  margin-bottom: 1.25rem;
-}
-
-.user-quote {
-  max-width: 680px;
-  margin: 1.5rem auto;
-  padding: 20px 24px;
-  border-radius: 16px;
-  background-color: var(--color-light-bg);
-  color: var(--color-light-bg);
-  position: relative;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-/* 꼬리 (왼쪽) */
-.user-quote.left::after {
-  content: '';
-  position: absolute;
-  left: 28px;
-  bottom: -10px;
-  width: 14px;
-  height: 14px;
-  border-color: var(--color-light-bg) transparent transparent transparent;
-  transform: rotate(45deg);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-}
-
-/* 꼬리 (오른쪽) */
-.user-quote.right::after {
-  content: '';
-  position: absolute;
-  right: 36px;
-  bottom: -10px;
-  width: 14px;
-  height: 14px;
-  background-color: var(--color-light-bg)  transparent transparent transparent;
-  transform: rotate(45deg);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-}
-
-.ux-breakdown-flow {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-top: 1rem;
-}
-
-/* 다크모드 배경 조정 */
-[data-theme="dark"] .user-quote {
-  background-color: rgba(255, 255, 255, 0.08);
-}
-[data-theme="dark"] .user-quote.left::after,
-[data-theme="dark"] .user-quote.right::after {
-  border-color: rgba(255, 255, 255, 0.08) transparent transparent transparent;
-}
-
 
 /* ----------------------------
   User Insight / Charts
